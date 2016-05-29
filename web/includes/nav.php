@@ -6,6 +6,7 @@
 </div>
 <nav class="navbar navbar-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseIt">☰</button>
+  <span class="brand"><?php echo APP_TITLE; ?></span>
   <ul class="nav navbar-nav pull-xs-right">
     <li class="nav-item active"><a class="nav-link" href="index.php">Inicio</a></li>
     <?php

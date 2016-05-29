@@ -16,7 +16,7 @@ function goReg() {
             if(connect.responseText == 1) {
               result = '<div class="alert alert-dismissible alert-success">';
               result += '<h4>Registro completado!</h4>';
-              result += '<p><strong>Estamos redireccionandote...</strong></p>';
+              result += '<p><strong>Confirmá desde tu mail !</strong></p>';
               result += '</div>';
               __('_AJAX_REG_').innerHTML = result;
               location.reload();
@@ -26,8 +26,7 @@ function goReg() {
           } else if(connect.readyState != 4) {
             result = '<div class="alert alert-dismissible alert-warning">';
             result += '<button type="button" class="close" data-dismiss="alert">x</button>';
-            result += '<h4>Procesando...</h4>';
-            result += '<p><strong>Estamos procesando tu registro...</strong></p>';
+            result += '<h4>Procesando registro, guachín...</h4>';
             result += '</div>';
             __('_AJAX_REG_').innerHTML = result;
           }
@@ -38,24 +37,24 @@ function goReg() {
       } else {
         result = '<div class="alert alert-dismissible alert-danger">';
         result += '<button type="button" class="close" data-dismiss="alert">x</button>';
-        result += '<h4>ERROR</h4>';
-        result += '<p><strong>Las contraseñas no coinciden.</strong></p>';
+        result += '<h4>Tenés un sochori en los dedos?</h4>';
+        result += '<p>Las contraseñas no coinciden, Master</p>';
         result += '</div>';
         __('_AJAX_REG_').innerHTML = result;
       }
     } else {
       result = '<div class="alert alert-dismissible alert-danger">';
       result += '<button type="button" class="close" data-dismiss="alert">x</button>';
-      result += '<h4>ERROR</h4>';
-      result += '<p><strong>Todos los campos deben estar llenos.</strong></p>';
+      result += '<h4>Que te copiá, Cubilla.</h4>';
+      result += '<p>Ese usuario ya exíste</p>';
       result += '</div>';
       __('_AJAX_REG_').innerHTML = result;
     }
   } else {
     result = '<div class="alert alert-dismissible alert-danger">';
     result += '<button type="button" class="close" data-dismiss="alert">x</button>';
-    result += '<h4>ERROR</h4>';
-    result += '<p><strong>Los términos y condiciones deben ser aceptados.</strong></p>';
+    result += '<p>Debes entregar tu ALMA y tu ANO a La MantApp.</p>';
+    result += '<p>Checkeá la cosita de abajo, dale <i class="fa fa-chevron-down"></p>';
     result += '</div>';
     __('_AJAX_REG_').innerHTML = result;
   }

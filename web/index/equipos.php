@@ -3,9 +3,9 @@
   <?php include(WEB_DIR . 'includes/head.php'); ?>
   <body>
     <?php include(WEB_DIR . 'includes/nav.php'); ?>
-    <div class="container">
+    <div class="container liga">
       <div class="row">
-
+        <!-- //// Muestra los equipos //// -->
         <?php
         if(isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]['permisos'] >= 1) {
           echo '<div class="container teams">
@@ -16,8 +16,6 @@
                   <div class="col-md-3 col-sm-6">Selección</div>
                   <div class="col-md-3 col-sm-6">Club</div>
                 </div>';
-
-
             $db = new Conexion();
             $resultConsulta = $db->query("SELECT * FROM equipos;");
 
@@ -35,95 +33,86 @@
         </table>
       </div>
     </div>
-
-
-        <!-- Agregar equipos -->
-
-  <div class="container">
+    <!-- //// Agregar nuevos equipos //// -->
+    <div class="container">
       <div class="row">
+        <div class="container showAddTeamBtnDiv">
+          <button id="ShowAddTeams" type="button" name="button" class="btn btndefault showAddTeamBtn text-center"><i class="fa fa-futbol-o"></i> Agregar Equipo</button>
+        </div>
+        <div class="container teamsForm">
+          <form id="TeamsForm" action="" method="post">
+            <div class="row col-md-12 addTeams">
+              <input required name="nombreeq[]" placeholder="Equipo"/>
+              <input required name="dt[]" placeholder="T&eacute;cnico"/>
+              <input required name="seleccion[]" placeholder="Selecci&oacute;n"/>
+              <input required name="club[]" placeholder="1er Club"/>
+            </div>
+            <button type="submit" name="insertar" value="Ingresar" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
+          </form>
+        </div>
+        <?php
+         //////////////////////// AL SUBMITEAR //////////////////////////
+         if(isset($_POST['insertar']))
+         {
 
+         $items1 = ($_POST['nombreeq']);
+         $items2 = ($_POST['dt']);
+         $items3 = ($_POST['seleccion']);
+         $items4 = ($_POST['club']);
 
+         ///////////// SEPARAR VALORES DE ARRAYS ////////////////////
+         while(true) {
 
-      <div class="container showAddTeamBtnDiv">
-        <button id="ShowAddTeams" type="button" name="button" class="btn btndefault showAddTeamBtn text-center"><i class="fa fa-futbol-o"></i> Agregar Equipo</button>
-      </div>
+             //// RECUPERAR LOS VALORES DE LOS ARREGLOS ////////
+             $item1 = current($items1);
+             $item2 = current($items2);
+             $item3 = current($items3);
+             $item4 = current($items4);
 
-      <div class="container teamsForm">
-        <form id="TeamsForm" action="" method="post">
-          <div class="row col-md-12 addTeams">
-            <input required name="nombreeq[]" placeholder="Equipo"/>
-            <input required name="dt[]" placeholder="T&eacute;cnico"/>
-            <input required name="seleccion[]" placeholder="Selecci&oacute;n"/>
-            <input required name="club[]" placeholder="1er Club"/>
-          </div>
-          <button type="submit" name="insertar" value="Ingresar" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
-        </form>
-      </div>
-      <?php
-       //////////////////////// AL SUBMITEAR //////////////////////////
-       if(isset($_POST['insertar']))
-       {
+             ////// ASIGNARLOS A VARIABLES ///////////////////
+             $eq=(( $item1 !== false) ? $item1 : ", &nbsp;");
+             $dtc=(( $item2 !== false) ? $item2 : ", &nbsp;");
+             $selec=(( $item3 !== false) ? $item3 : ", &nbsp;");
+             $c=(( $item4 !== false) ? $item4 : ", &nbsp;");
 
-       $items1 = ($_POST['nombreeq']);
-       $items2 = ($_POST['dt']);
-       $items3 = ($_POST['seleccion']);
-       $items4 = ($_POST['club']);
+             //// CONCATENAR LOS VALORES EN ORDEN PARA INSERT ////////
+             $valores="('$eq','$dtc','$selec','$c'),";
 
-       ///////////// SEPARAR VALORES DE ARRAYS ////////////////////
-       while(true) {
+             //////// YA QUE TERMINA CON COMA CADA FILA, SE RESTA CON LA FUNCIÓN SUBSTR EN LA ULTIMA FILA /////////////////////
+             $valoresQ= substr($valores, 0, -1);
 
-           //// RECUPERAR LOS VALORES DE LOS ARREGLOS ////////
-           $item1 = current($items1);
-           $item2 = current($items2);
-           $item3 = current($items3);
-           $item4 = current($items4);
+             // Probar
+             // echo "INSERT INTO equipos ('equipo','dt','seleccion','club1','club2') VALUES $valoresQ";
 
-           ////// ASIGNARLOS A VARIABLES ///////////////////
-           $eq=(( $item1 !== false) ? $item1 : ", &nbsp;");
-           $dtc=(( $item2 !== false) ? $item2 : ", &nbsp;");
-           $selec=(( $item3 !== false) ? $item3 : ", &nbsp;");
-           $c=(( $item4 !== false) ? $item4 : ", &nbsp;");
+             ///////// QUERY DE INSERCIÓN ////////////////////////////
+             $insertion = "INSERT INTO equipos (nombreeq,dt,seleccion,club) VALUES $valoresQ";
+             // mysqli_query($db,$insertion);
 
-           //// CONCATENAR LOS VALORES EN ORDEN PARA INSERT ////////
-           $valores="('$eq','$dtc','$selec','$c'),";
+             if(!mysqli_query($db,$insertion))
+             {
+               die('Error: ' . mysqli_error($db));
+             }
+             else
+             {
+               echo '<script language="javascript">';
+               echo 'alert("Equipo agregado"); location.href="?view=links&?link=equipos"';
+               echo '</script>';
+             };
 
-           //////// YA QUE TERMINA CON COMA CADA FILA, SE RESTA CON LA FUNCIÓN SUBSTR EN LA ULTIMA FILA /////////////////////
-           $valoresQ= substr($valores, 0, -1);
+             mysqli_close($db);
 
-           // Probar
-           // echo "INSERT INTO equipos ('equipo','dt','seleccion','club1','club2') VALUES $valoresQ";
+             // Up! Next Value
+             $item1 = next( $items1 );
+             $item2 = next( $items2 );
+             $item3 = next( $items3 );
+             $item4 = next( $items4 );
 
-           ///////// QUERY DE INSERCIÓN ////////////////////////////
-           $insertion = "INSERT INTO equipos (nombreeq,dt,seleccion,club) VALUES $valoresQ";
-           // mysqli_query($db,$insertion);
-
-           if(!mysqli_query($db,$insertion))
-           {
-             die('Error: ' . mysqli_error($db));
-           }
-           else
-           {
-             echo '<script language="javascript">';
-             echo 'alert("Equipo agregado"); location.href="?view=links&?link=equipos"';
-             echo '</script>';
-           };
-
-           mysqli_close($db);
-
-           // Up! Next Value
-           $item1 = next( $items1 );
-           $item2 = next( $items2 );
-           $item3 = next( $items3 );
-           $item4 = next( $items4 );
-
-           // Check terminator
-           if($item1 === false && $item2 === false && $item3 === false && $item4 === false) break;
-         //
-       }
-     };
-     ?>
-
-
+             // Check terminator
+             if($item1 === false && $item2 === false && $item3 === false && $item4 === false) break;
+           //
+         }
+       };
+       ?>
       </div>
     </div>
 

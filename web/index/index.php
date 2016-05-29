@@ -7,13 +7,13 @@
     <div class="container welcome">
       <?php
           if(isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]['permisos'] >= 0) {
-            echo 'Bienvenido'. '&nbsp;' . strtoupper($_users[$_SESSION['app_id']]['user']) . ' a <h2>La MantApp</h2>';
+            echo 'Bienvenido  &nbsp;' .  strtoupper($_users[$_SESSION['app_id']]['user']) . '&nbsp; a <h2> '. APP_TITLE . '</h2>';
           }
           else {
             echo '
                   <div class="homeWelcomeMessage">
                     <p>Si querés <b>desplegar</b> todo el poder de</p>
-                    <h1>La MantaApp</h1><i class="fa fa-chevron-down" aria-hidden="true"></i><br /><a href="#" data-toggle="modal" data-target="#Login">
+                    <h1>La MantaApp</h1><i class="fa fa-chevron-down"></i><br /><a href="#" data-toggle="modal" data-target="#Login">
                     <button type="button" class="btn btndefault mainBtn">Logueate Capo</button></a>
                   </div>
                   <div class="container homeMantero">
@@ -79,11 +79,6 @@
                           <div class="card-block"><h4>ESTADÍSTICAS Y PREMIOS</h4></div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="container homeMantero">
-                  <div class="row">
-                    <img src="view/images/mantero.gif" alt="" />
                   </div>
                 </div>';
         }

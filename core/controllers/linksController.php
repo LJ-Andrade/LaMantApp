@@ -1,6 +1,4 @@
 <?php
-
-// include(WEB_DIR . 'index/equipos.php');
 $ruta = $_GET['?link'];
 
 if (isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]['permisos'] >= 1) {
@@ -27,8 +25,4 @@ if (isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]['permisos'] >= 1
       break;
   }
 }
-
-
-
-
 ?>

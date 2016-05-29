@@ -3,16 +3,17 @@
 session_start();
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-// Constantes de conexión
+// Constantes de Conexión
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASS','root');
 define('DB_NAME','lamantapp');
 
-// Constantes de estructura
+// Constantes de App
 define('WEB_DIR','web/'); // Web Directory
 define('APP_URL','http://localhost/LaMantApp/'); // Author
-define('APP_TITLE','La MantApp'); // Page / App title
+define('PAGE_TITLE','La MantApp'); // Page title
+define('APP_TITLE','La MantApp <span style="font-size: 15px; vertical-align: text-top">&reg;<span>'); // App title
 define('APP_VERSION','Versi&oacute;n 1.0 - Passe Rasteirinho - Alpha'); // Version
 define('APP_AUTHOR','ElVieja'); // Author
 
