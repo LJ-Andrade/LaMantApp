@@ -313,6 +313,21 @@ body.ligaMain {
     .ligaPosiciones ul li, .ligaResultados ul li {
       list-style: none; }
 
+.transInput input {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #6e6e7a;
+  margin-bottom: 5px; }
+.transInput input::-webkit-input-placeholder {
+  color: #000; }
+.transInput input:-moz-placeholder {
+  color: #000; }
+.transInput input::-moz-placeholder {
+  color: #000; }
+.transInput input:-ms-input-placeholder {
+  color: #000; }
+
 .deleteIcon {
   padding: 0 10px;
   background-color: #c15c5c;
