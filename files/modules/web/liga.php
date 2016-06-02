@@ -1,7 +1,7 @@
 <?php
   include('conection.php');
   checkUser();
-  include('constant.php');
+
 ?>
 
 <!DOCTYPE html>

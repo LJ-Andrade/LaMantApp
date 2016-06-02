@@ -1,13 +1,8 @@
 $( document ).ready(function() {
   // Wow Image Loader On Scroll //
   new WOW().init();
-
-
 });
-
-
 /////// Tags /////////
-
   function onAddTag(tag) {
     alert("Added a tag: " + tag);
   }
@@ -58,12 +53,12 @@ $( document ).ready(function() {
     // });
   });
 
-
   ///// SLOGAN /////
-  // Show Slogan on footer on hover
-  // $('.SloganChamuy').hide();
-  $('.Slogan').hover(function() {
-    // alert('ok');
-    $( '.SloganChamuy' ).removeClass('Hidden' );
 
+  $('.Slogan').hover(function() {
+    if ($(".SloganChamuy").hasClass("Hidden")) {
+      $('.SloganChamuy').removeClass('Hidden');
+    } else {
+      $('.SloganChamuy').addClass('Hidden');
+    }
   });

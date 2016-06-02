@@ -19,7 +19,7 @@
       if(isset($_SESSION['user'])){
         echo '<li class="nav-item"><a class="nav-link" href="liga.php">Liga</a></li>
         <li class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></li>
-              <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i></a></li>';
+        <li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i></a></li>';
       }
       ?>
     </ul>

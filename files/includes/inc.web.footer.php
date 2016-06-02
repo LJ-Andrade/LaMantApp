@@ -1,6 +1,7 @@
+<?php   include('constant.php'); ?>
 <footer class="Slogan">
 	<div class="row">
-		<div class="col-md-12 Hidden SloganChamuy">
+		<div class="col-md-12 SloganChamuy Hidden">
 			<div class="">
 				<h3><?php echo APP_TITLE; ?></h3>
 				<h5>Desplegá la Manta del poder que está en vos</h5>
