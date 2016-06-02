@@ -1,0 +1,653 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,600,700,500);
+/* line 1, ../sass/_general.sass */
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Cabin", sans-serif;
+  padding-bottom: 100px;
+}
+
+/* line 7, ../sass/_general.sass */
+a {
+  text-decoration: none;
+  color: #000;
+  outline: 0;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+/* line 16, ../sass/_general.sass */
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: #000;
+  outline: 0;
+}
+
+/* line 21, ../sass/_general.sass */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+  margin-bottom: 10px;
+}
+
+/* line 26, ../sass/_general.sass */
+p {
+  margin: 0;
+}
+
+/* line 29, ../sass/_general.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, ../sass/_general.sass */
+label {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* line 40, ../sass/_general.sass */
+.brd {
+  border: 1px solid red;
+}
+
+/* line 43, ../sass/_general.sass */
+.centertxt {
+  text-align: center;
+}
+
+/* line 46, ../sass/_general.sass */
+.pad0 {
+  padding: 0;
+}
+
+/* line 48, ../sass/_general.sass */
+.marg0 {
+  margin: 0;
+}
+
+/* line 50, ../sass/_general.sass */
+.padmarg0 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 54, ../sass/_general.sass */
+.Hidden {
+  display: none !important;
+}
+
+/* line 58, ../sass/_general.sass */
+.mainWrapper {
+  position: relative;
+}
+
+/* line 61, ../sass/_general.sass */
+.mainContainer {
+  margin-top: 20px;
+}
+
+/* line 64, ../sass/_general.sass */
+.row-centered {
+  text-align: center;
+}
+
+/* line 67, ../sass/_general.sass */
+.col-centered {
+  display: inline-block;
+  float: none;
+  text-align: left;
+  margin-right: -4px;
+}
+
+/* line 73, ../sass/_general.sass */
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+/* line 82, ../sass/_general.sass */
+.alertContainer {
+  margin: 25px 10px;
+}
+
+/* line 87, ../sass/_general.sass */
+.mainTitle {
+  text-align: center;
+  margin: 25px 10px;
+}
+
+/* line 92, ../sass/_general.sass */
+.titW h1, .titW h2, .titW h3, .titW h4, .titW h5, .titW p {
+  color: #fff;
+}
+
+/* line 95, ../sass/_general.sass */
+.titB h1, .titB h2, .titB h3, .titB h4, .titB h5, .titB p {
+  color: #fff;
+}
+
+/* line 100, ../sass/_general.sass */
+#login {
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.75);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  max-width: 20em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Etiquetas del formulario */
+/* Campos del formulario */
+/* line 146, ../sass/_general.sass */
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+/* line 150, ../sass/_general.sass */
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1px 0;
+  cursor: pointer;
+}
+/* line 155, ../sass/_general.sass */
+.checkbox-custom:active, .checkbox-custom:focus, .checkbox-custom-label:active, .checkbox-custom-label:focus, .radio-custom:active, .radio-custom:focus, .radio-custom-label:active, .radio-custom-label:focus {
+  outline: none;
+}
+
+/* line 158, ../sass/_general.sass */
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+}
+
+/* line 161, ../sass/_general.sass */
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* line 173, ../sass/_general.sass */
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  background: #c63461;
+  box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+/* line 177, ../sass/_general.sass */
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+/* line 180, ../sass/_general.sass */
+.radio-custom:checked + .radio-custom-label:before {
+  background: #ccc;
+  box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+/* line 184, ../sass/_general.sass */
+.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
+  outline: 1px solid #ddd;
+}
+
+/* line 188, ../sass/_general.sass */
+.footer {
+  position: fixed;
+  width: 100%;
+  padding: 5px 0;
+  padding-top: 10px;
+  left: 0px;
+  bottom: 0px;
+  height: 45px;
+  width: 100%;
+  background: #b63b3b;
+  text-align: center;
+}
+/* line 199, ../sass/_general.sass */
+.footer span {
+  color: #fff;
+}
+
+/* line 1, ../sass/_nav.sass */
+.logo {
+  max-width: 80px;
+}
+
+/* line 5, ../sass/_nav.sass */
+nav button {
+  color: #fff;
+}
+/* line 7, ../sass/_nav.sass */
+nav .brand {
+  color: #fff;
+}
+
+/* line 10, ../sass/_nav.sass */
+.navbar {
+  background-color: #393939;
+  border-radius: 0;
+}
+
+/* line 14, ../sass/_nav.sass */
+.bg-inverse {
+  padding: 5px;
+}
+
+/* line 18, ../sass/_nav.sass */
+.nav-link:hover {
+  cursor: pointer;
+}
+
+/* line 2, ../sass/_content.sass */
+.loginScreen {
+  background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 12, ../sass/_content.sass */
+.welcome {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+/* line 17, ../sass/_content.sass */
+.welcome h1 {
+  text-align: center;
+}
+/* line 19, ../sass/_content.sass */
+.welcome img {
+  max-width: 450px;
+}
+
+/* line 23, ../sass/_content.sass */
+.teams {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, #e68d8d 0, #f56363 95%);
+  padding: 15px;
+}
+/* line 28, ../sass/_content.sass */
+.teams h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* line 32, ../sass/_content.sass */
+.tablaLigaRes {
+  max-width: 950px;
+}
+
+/* line 35, ../sass/_content.sass */
+#tabla {
+  background-color: #bebebe;
+}
+/* line 37, ../sass/_content.sass */
+#tabla input {
+  color: #000;
+  padding-left: 10px;
+  border: 0;
+}
+
+/* line 44, ../sass/_content.sass */
+.listTeams, .listTitles {
+  background-color: #ee3e3e;
+  color: #fff;
+  padding: 5px;
+  margin: 2px 0;
+  transition: all 0.3s ease 0s;
+}
+
+/* line 51, ../sass/_content.sass */
+.listTitles {
+  background-color: #3c3c3c;
+  font-weight: 600;
+}
+
+/* line 56, ../sass/_content.sass */
+.listTeams:hover {
+  background-color: #f0a9a9;
+  cursor: pointer;
+  color: #000;
+}
+
+/* line 61, ../sass/_content.sass */
+.teamsForm {
+  text-align: center;
+  max-width: 350px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 67, ../sass/_content.sass */
+.teamsForm form {
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #8f5959 0, #d77474 95%);
+  margin-top: 15px;
+  padding: 15px 10px;
+  -webkit-box-shadow: 7px 6px 18px -3px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 7px 6px 18px -3px rgba(0, 0, 0, 0.55);
+  box-shadow: 7px 6px 18px -3px rgba(0, 0, 0, 0.55);
+}
+
+/* line 75, ../sass/_content.sass */
+.teamSelected {
+  border: 1px solid black;
+}
+
+/* line 78, ../sass/_content.sass */
+.addTeams {
+  border: 0;
+  margin: 5px 0;
+}
+/* line 81, ../sass/_content.sass */
+.addTeams input {
+  padding: 8px 10px;
+  margin: 3px;
+  border: 0;
+  text-align: center;
+  width: auto;
+}
+
+/* line 88, ../sass/_content.sass */
+.showAddTeamBtnDiv {
+  text-align: center;
+}
+
+/* line 92, ../sass/_content.sass */
+.homeMenu {
+  display: flex;
+  text-align: center;
+}
+/* line 95, ../sass/_content.sass */
+.homeMenu h4 {
+  font-size: 1em;
+}
+
+/* line 97, ../sass/_content.sass */
+.menuCard {
+  max-width: 300px;
+  text-align: center;
+}
+/* line 100, ../sass/_content.sass */
+.menuCard img {
+  max-width: 100%;
+}
+
+/* line 107, ../sass/_content.sass */
+.categoriasMenu ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* line 113, ../sass/_content.sass */
+.homeWelcomeMessage {
+  margin: 65px 0;
+}
+/* line 115, ../sass/_content.sass */
+.homeWelcomeMessage .fa {
+  font-size: 25px;
+}
+
+/* line 118, ../sass/_content.sass */
+.homeMantero {
+  margin: 25px 0;
+  text-align: center;
+}
+
+/* line 124, ../sass/_content.sass */
+body.ligaMain {
+  background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 130, ../sass/_content.sass */
+.liga {
+  margin-top: 25px;
+  text-align: center;
+}
+/* line 133, ../sass/_content.sass */
+.liga h1 {
+  color: #fff;
+}
+
+/* line 136, ../sass/_content.sass */
+.ligaPartido {
+  min-height: 250px;
+  border-radius: 5px;
+  background-color: rgba(226, 226, 226, 0.45);
+  padding: 20px 10px 10px;
+  text-align: center;
+}
+/* line 142, ../sass/_content.sass */
+.ligaPartido button {
+  margin-top: 10px;
+}
+
+/* line 145, ../sass/_content.sass */
+.partidoResultados {
+  padding: 2px 5px;
+}
+/* line 147, ../sass/_content.sass */
+.partidoResultados form div {
+  padding: 0;
+}
+
+/* line 150, ../sass/_content.sass */
+.partidoResultadosGoles {
+  padding-left: 4px !important;
+  margin-bottom: 2px;
+}
+
+/* line 154, ../sass/_content.sass */
+.pad0 {
+  padding: 0;
+}
+
+/* line 157, ../sass/_content.sass */
+.ligaTabla {
+  padding: 10px 10px;
+}
+
+/* line 161, ../sass/_content.sass */
+.transContainer {
+  border-radius: 5px;
+  background-color: rgba(226, 226, 226, 0.85);
+}
+
+/* line 165, ../sass/_content.sass */
+.ligaPosiciones {
+  padding: 10px;
+  min-height: 250px;
+}
+/* line 168, ../sass/_content.sass */
+.ligaPosiciones ul {
+  display: inline;
+}
+/* line 170, ../sass/_content.sass */
+.ligaPosiciones ul li {
+  list-style: none;
+}
+
+/* line 173, ../sass/_content.sass */
+.ligaEstadisticas {
+  margin-top: 15px;
+}
+
+/* line 176, ../sass/_content.sass */
+.ligaResultados {
+  margin: 0;
+  margin: 15px 0;
+  padding: 15px;
+  text-align: left;
+}
+/* line 182, ../sass/_content.sass */
+.ligaResultados ul li {
+  margin: 5px 15px;
+  list-style: none;
+}
+/* line 185, ../sass/_content.sass */
+.ligaResultados ul li span {
+  font-size: 20px;
+}
+
+/* line 188, ../sass/_content.sass */
+.transInput input {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #6e6e7a;
+  margin-bottom: 5px;
+}
+/* line 194, ../sass/_content.sass */
+.transInput input::-webkit-input-placeholder {
+  color: #000;
+}
+/* line 196, ../sass/_content.sass */
+.transInput input:-moz-placeholder {
+  color: #000;
+}
+/* line 198, ../sass/_content.sass */
+.transInput input::-moz-placeholder {
+  color: #000;
+}
+/* line 200, ../sass/_content.sass */
+.transInput input:-ms-input-placeholder {
+  color: #000;
+}
+
+/* line 203, ../sass/_content.sass */
+.partidoExpulsados {
+  margin: 10px 0;
+}
+
+/* line 207, ../sass/_content.sass */
+.TEST {
+  background-color: #fff;
+  margin: 25px 0;
+  padding: 10px;
+}
+
+/* line 212, ../sass/_content.sass */
+div.tagsinput {
+  border-bottom: 1px solid #6c6c6c;
+  background: transparent;
+  padding: 5px;
+  width: 300px;
+  height: 40px;
+  overflow-y: auto;
+}
+/* line 219, ../sass/_content.sass */
+div.tagsinput span.tag {
+  border-radius: 5px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  display: block;
+  float: left;
+  padding: 5px;
+  text-decoration: none;
+  background: #af8073;
+  color: #fff;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-family: helvetica;
+  font-size: 13px;
+}
+/* line 233, ../sass/_content.sass */
+div.tagsinput span.tag a {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+}
+/* line 238, ../sass/_content.sass */
+div.tagsinput input {
+  width: 80px;
+  margin: 0 5px 5px 0;
+  font-family: helvetica;
+  font-size: 13px;
+  border: 1px solid transparent;
+  padding: 5px;
+  background: 0 0;
+  color: #000;
+  outline: 0;
+}
+/* line 249, ../sass/_content.sass */
+div.tagsinput div {
+  display: block;
+  float: left;
+}
+
+/* line 253, ../sass/_content.sass */
+.tags_clear {
+  clear: both;
+  width: 100%;
+  height: 0;
+}
+
+/* line 258, ../sass/_content.sass */
+.not_valid {
+  background: #FBD8DB !important;
+  color: #90111A !important;
+}
+
+/* line 1, ../sass/_buttons.sass */
+.deleteIcon {
+  padding: 0 10px;
+  background-color: #c15c5c;
+  color: #fff;
+}
+
+/* line 10, ../sass/_buttons.sass */
+.showAddTeamBtn {
+  background-color: #855858;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+}
+/* line 15, ../sass/_buttons.sass */
+.showAddTeamBtn:hover {
+  background-color: #b67a7a;
+}
+
+/* line 18, ../sass/_buttons.sass */
+.addTeamBtn, .mainBtn {
+  margin-top: 15px;
+  background: linear-gradient(to bottom, #da4848 0, #b92525 95%);
+  border: 0;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+}
+/* line 24, ../sass/_buttons.sass */
+.addTeamBtn:hover, .addTeamBtn:focus, .addTeamBtn:active, .mainBtn:hover, .mainBtn:focus, .mainBtn:active {
+  background: linear-gradient(to bottom, #863131 0, #914545 95%);
+}
