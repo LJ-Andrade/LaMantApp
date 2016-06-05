@@ -2,6 +2,11 @@
   include('conection.php');
   checkUser();
   include('constant.php');
+
+
+  $usersQuery = fetchAssoc("SELECT * FROM user;");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,17 +17,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <?php include('../../../files/includes/inc.web.head.php'); ?> <!-- Head -->
-
 </head>
   <body class="ligaMain">
     <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
     <header>
       <!-- Page Header -->
-      <div class="mainTitle titB"><h1><?php echo APP_TITLE; ?></h1><p>Desplegá la Manta del poder que está en vos<p></div>
-      <div class="mainTitle titB"><h1>Liga</h1></div>
+      <div class="mainTitle titW"><h1>Liga</h1></div>
         <!-- /Page Header -->
     </header>
     <div class="mainWrapper">
+
+      <!-- Muestra equipos -->
+      <div class="container transContainer">
+        <div class="row">
+          <div class="teamList">
+            <h4>Usuarios Activos</h4>
+
+
+          <?php
+
+          // var_dump($usersQuery);
+          while($row=mysql_fetch_array($usersQuery)){
+          echo '<div class="col-md-3 col-sm-6">'.$row['user'].'</div>';
+          }
+          mysql_free_result($usersQuery);
+          mysql_close($con);
+          // <div class="col-md-3 col-sm-6">'.$row['password'].'</div>
+          // <div class="col-md-3 col-sm-6">'.$row['status'].'</div>
+          // <div class="col-md-3 col-sm-6">'.$row['creation_date'].'</div>
+          // <div class="col-md-3 col-sm-6">'.$row['last_login'].'</div>
+
+         ?>
+          </div>
+        </div>
+      </div>
+      <div class="container transContainer">
+        <div class="row">
+          <div class="teamList">
+            HOLA
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="container col-md-8 ligaPartido">

@@ -42,18 +42,7 @@
       // echo '<li class="nav-item"><a class="nav-link" href="styletest.php">Test </a></li>';
       // } ?>
     </div>
-    <?php ?>
-      <!-- <br><br><br><br>CREA TU USUARIO GUACHIN...
-      <form action="" method="POST">
-        <input type="hidden" name="action" id="action" value="insert"/>
-        <label>Usuario: </label>
-        <input type="text" name="user" id="user"/><br>
-        <label>Contraseña: </label>
-        <input type="password" name="password" id="password"/><br><br>
-        <input type="submit" value="Enviar"/>
-      </form> -->
 
-    </div>
 
     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->

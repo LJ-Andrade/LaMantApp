@@ -35,7 +35,7 @@
 
      -->
 
-    <div class="container welcome">
+    <div class="container welcome test">
 
       Bienvenido <?php echo $_SESSION['user']; ?>
 

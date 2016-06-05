@@ -1,8 +1,8 @@
 <?php
   if($_GET['msg']=='error')
-    echo 'Le pifiaste amego';
+    echo 'ERROR MAL LOS DATOS';
   if($_GET['msg']=='notvalid')
-    echo 'No pode entrar ahi ameo';
+    echo 'ERROR PADRE';
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
           </div>
           <div class="loginRow">
             <i class="fa fa-lock"></i>
-            <input type="password" name="password" id="password"  placeholder="Password"/>
+            <input type="text" name="password" id="password"  placeholder="Password"/>
           </div><br>
           <button type="submit" value="Enviar"/>Ingresar</button>
         </form>

@@ -1,7 +1,7 @@
 <?php
   include('conection.php');
   checkUser();
-
+  include('constant.php');
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +18,7 @@
     <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
     <header>
       <!-- Page Header -->
-      <div class="mainTitle titW">
-        <h1>Liga</h1>
-      </div>
+      <div class="mainTitle titB"><h1>Liga</h1></div>
         <!-- /Page Header -->
     </header>
     <div class="mainWrapper">
@@ -107,8 +105,9 @@
         </div>
       </div><!-- /Container Liga -->
 
-      <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
+
     </div><!-- /Wrapper -->
+    <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
   </body>
 </html>
