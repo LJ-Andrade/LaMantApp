@@ -1,4 +1,5 @@
 <?php
+  session_start();
   if($_GET['msg']=='error')
     echo 'ERROR MAL LOS DATOS';
   if($_GET['msg']=='notvalid')

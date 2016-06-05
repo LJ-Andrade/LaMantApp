@@ -1,5 +1,8 @@
 <?php
 
+date_default_timezone_set("America/Argentina/Buenos_Aires");
+
+
 // Constantes
 define('IMG_DIR','../../../skin/images/');
 define('APP_URL','http://localhost/LaManta/'); // Author

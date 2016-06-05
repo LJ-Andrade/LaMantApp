@@ -2,10 +2,8 @@
   include('conection.php');
   checkUser();
   include('constant.php');
-
-
-  $usersQuery = fetchAssoc("SELECT * FROM user;");
-
+  $con = selConsult("SELECT * FROM user")
+  echo $row['user'];
 
 ?>
 
