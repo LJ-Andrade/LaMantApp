@@ -2,7 +2,6 @@
   include('conection.php');
   checkUser();
   include('config.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -21,23 +20,21 @@
       <h3>Bienvenido <?php echo strtoupper($_SESSION['user'])?></h3>
       <h2>A <?php echo APP_TITLE?></h2>
       <?php
-      $user = $_SESSION['user'];
-      if($user == jav) {
+      $user1 = $_SESSION['user'];
+      if($user1 == jav) {
       echo 'Hola padre, tomá: <a class="nav-link" href="styletest.php">Test </a>';
       };
       ?>
       </br></br>
 
 
-
-
-
+    
 
     </div>
 
 
-    <!-- <?php $con->close(); ?> -->
     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
+
   </body>
 </html>

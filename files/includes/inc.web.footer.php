@@ -1,4 +1,4 @@
-<?php   include('constant.php'); ?>
+<?php   include('config.php'); ?>
 <footer class="Slogan">
 	<div class="row">
 		<div class="col-md-12 SloganChamuy Hidden">
