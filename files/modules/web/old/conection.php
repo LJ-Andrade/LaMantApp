@@ -37,4 +37,19 @@ function execQuery($Query)// para hacer INSERT, UPDATE y DELETE
   return mysqli_query($con, $Query);
 }
 
+
+// function connect()
+// {
+//   $host     = '127.0.0.1';
+//   $name     = 'root';
+//   $pass     = 'root';
+//   $database = 'lamantapp';
+//
+//   // Conectando, seleccionando la base de datos
+//   $con = mysql_connect($host, $name, $pass, $database)
+//       or die('No se pudo conectar: ' . mysql_error());
+//   echo 'Connected successfully';
+//   mysql_select_db($database) or die('No se pudo seleccionar la base de datos');
+// }
+
 ?>

@@ -1,21 +1,8 @@
 <?php
   include('conection.php');
   checkUser();
-  include('constant.php');
+  include('config.php');
 
-  //
-  // if($_GET['action']=='create')
-  // {
-  //   execQuery("INSERT INTO user (user,password,name)VALUES('".$_GET['user']."','1212','pepe')");
-  //   echo $_GET['user']." ha sido creado";
-  // }
-  //
-  // if($_POST['action']=='insert')
-  // {
-  //   execQuery("INSERT INTO user (user,password)VALUES('".$_POST['user']."','".$_POST['password']."')");
-  //   echo $_POST['user']." ha sido creado";
-  // }
-  //
 ?>
 
 <!DOCTYPE html>
@@ -39,32 +26,17 @@
       echo 'Hola padre, tomá: <a class="nav-link" href="styletest.php">Test </a>';
       };
       ?>
-    </br>  </br>
-      <?php
-
-      function selectStuff($query)
-        {
-          $con    = connect();
-          $result = mysqli_query($con, $query);
-          $row    = mysqli_fetch_assoc($result);
-          return $result;
-        }
-
-      $query = selectStuff("SELECT * FROM user");
-          echo $result['user'];
-      //
-      // $con = connect(); // Hace la conexión (viene de conection.php)
-      // $resultado = mysqli_query($con, "SELECT * FROM user");
-      // $fila      = mysqli_fetch_assoc($resultado);
-      // echo $fila['password'].' , '.$fila['user']; // test
+      </br></br>
 
 
 
 
-      ?>
+
+
     </div>
 
 
+    <!-- <?php $con->close(); ?> -->
     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
   </body>

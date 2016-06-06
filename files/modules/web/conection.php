@@ -2,7 +2,6 @@
 session_name('lamantapp');
 session_start();
 
-date_default_timezone_set("America/Argentina/Buenos_Aires");
 function checkUser()
 {
   if(!$_SESSION['user'])
@@ -13,22 +12,22 @@ function checkUser()
 }
 
 $host     = '127.0.0.1';
-$name     = 'root';
-$pass     = 'root';
+$user     = 'root';
+$password = 'root';
 $database = 'lamantapp';
 
+$con = new mysqli($host,$user,$password,$database);
+if ($con->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $con->connect_errno . ") " . $con->connect_error;
+}
+echo $con->host_info . "\n";
 
-// Create connection
-$con = new mysqli($host, $name, $pass, $database);
-// Check connection
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
+$con = new mysqli("127.0.0.1", "root", "root", "lamantapp", 3306);
+if ($con->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $con->connect_errno . ") " . $con->connect_error;
 }
 
-// $resultado = mysqli_query($con, "SELECT * FROM user");
-// $fila      = mysqli_fetch_assoc($resultado);
-// echo $fila['user'];
-
+// echo $con->host_info . "\n"; Test de conexion
 
 function fetchAssoc($Query)// para hacer SELECT
 {
@@ -42,19 +41,31 @@ function fetchAssoc($Query)// para hacer SELECT
   while($Data[]    = mysqli_fetch_assoc($result)){}
   array_pop($Data);
   return $Data;
+
 }
 
-  function connect() {
-      $host     = '127.0.0.1';
-      $name     = 'root';
-      $pass     = 'root';
-      $database = 'lamantapp';
+function execQuery($Query)// para hacer INSERT, UPDATE y DELETE
+{
+  $host     = '127.0.0.1';
+  $user     = 'root';
+  $password = 'root';
+  $database = 'lamantapp';
 
-      $con=new mysqli($host, $name, $pass, $database);
-      return $con;
-      }
+  $con      = mysqli_connect($host, $user, $password, $database);
+  return mysqli_query($con, $Query);
+}
 
 
+function connect()
+{
+  $host     = '127.0.0.1';
+  $name     = 'root';
+  $pass     = 'root';
+  $database = 'lamantapp';
 
-$con->close();
+  // Conectando, seleccionando la base de datos
+  $con = mysqli_connect($host, $name, $pass, $database);
+
+}
+
 ?>
