@@ -22,88 +22,90 @@
         <!-- /Page Header -->
     </header>
     <div class="mainWrapper">
-      <div class="container">
-        <div class="row">
-          <div class="container col-md-8 ligaPartido">
-            <form method="post" class="form-horizontal">
-              <div class="col-md-6 col-xs-12 partidoResultados">
-                <div class="col-md-9">
-                  <select name="equipoLoc[]" class="form-control localSelection" id="select">
-                    <option>Local</option>
-                  </select>
-                </div>
-                <div class="col-md-3 col-xs-3 partidoResultadosGoles">
-                  <input name="golesLoc[]" class="form-control" placeholder="Goles" type="number">
-                </div>
-                <div class="col-md-12 col-xs-9 transInput partidoExpulsados">
-                  <input name="expLoc[]" id="tags_1" type="text" class="tags" value="" />
-                  <label>Expulsados Locales</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12 partidoResultados">
-                <div class="col-md-9">
-                  <select name="equipoVis[]" class="form-control localSelection" id="select">
-                  <option >Local</option>
-                  </select>
-                </div>
-              <div class="col-md-3 col-xs-3 partidoResultadosGoles">
-                <input name="golesVis[]" class="form-control" placeholder="Goles" type="number">
-              </div>
-                <div class="col-md-12 col-xs-9 transInput partidoExpulsados">
-                  <input name="expVis[]" id="tags_2" type="text" class="tags" value="" />
-                  <label>Expulsados Visitantes</label>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <button type="submit" name="anotarResultado" class="btn btn-default">Fin del Partido</button>
-              </div>
-            </form>
-          </div>
 
-          <div class="col-md-4">
-            <div class="transContainer">
-              <div class="ligaPosiciones">
-                <h5>RESULTADOS</h5>
-                <h4>Posiciones</h4>
-                <hr>
-                <ul>
-                  <li>Posicion 1</li>
-                  <li>Posicion 2</li>
-                  <li>Posicion 3</li>
-                  <li>Posicion 4</li>
-                </ul>
-              </div>
+
+
+
+<div class="container">
+  <div class="row partidoyTabla">
+
+    <div class="col-md-4 col-xs-12 ligaWelcome">
+      <div class="container transContainer ligaWelcomeInner">
+        <h3>Liga Loca llena de chele!</h3>
+      </div>
+    </div>
+
+    <div class="col-md-8 ligaPartido ">
+      <div class="container transContainer ligaPartidoInner">
+        <form method="post" class="form-horizontal">
+          <div class="col-md-6 col-xs-12">
+            <div class="col-md-8">
+              <select name="equipoLoc[]" class="form-control localSelection" id="select">
+                <option>Local</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-xs-3">
+              <input name="golesLoc[]" class="form-control" placeholder="Goles" type="number">
+            </div>
+            <div class="col-md-12 col-xs-9 transInput partidoExpulsados">
+              <input name="expLoc[]" id="tags_1" type="text" class="tags" value="" />
+              <label>Expulsados Locales</label>
             </div>
           </div>
-        </div><!-- /1st Row -->
-      </div><!-- /1st Container -->
-      <!-- 2dn container -->
-      <div class="container">
-        <div class="row">
-          <div class="container col-md-8 pad0">
-            <div class="ligaResultados transContainer ">
-              <h5>RESULTADOS</h5>
-              <hr>
-              <ul>
-                <li>Posicion 2</li>
-              </ul>
+          <div class="col-md-6 col-xs-12">
+            <div class="col-md-8">
+              <select name="equipoVis[]" class="form-control localSelection" id="select">
+              <option >Local</option>
+              </select>
+            </div>
+            <div class="col-md-4 col-xs-3">
+              <input name="golesVis[]" class="form-control" placeholder="Goles" type="number">
+            </div>
+            <div class="col-md-12 col-xs-9 transInput partidoExpulsados">
+              <input name="expVis[]" id="tags_2" type="text" class="tags" value="" />
+              <label>Expulsados Visitantes</label>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="transContainer">
-              <div class="ligaPosiciones ligaEstadisticas">
-                <h5>Goleadores</h5>
-                <hr>
-                <ul>
-                  <li>Posicion 2</li>
-                  <li>Posicion 3</li>
-                  <li>Posicion 4</li>
-                </ul>
-              </div>
-            </div>
+          <div class="col-md-12 anotarPartido">
+            <button type="submit" name="anotarResultado" class="btn btn-default">Fin del Partido</button>
           </div>
-        </div>
-      </div><!-- /Container Liga -->
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+  </div><!-- /1st Row -->
+</div><!-- /Container -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-xs-12 ligaPartido ">
+      <div class="container transContainer ligaPartidoInner">
+        <h2>RESULTADOS</h2>
+        <hr>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12 ligaTabla">
+      <div class="container transContainer ligaInner">
+        <h2>POSICIONES</h2>
+        <hr>
+        <ul>
+          <li>Posicion 1</li>
+          <li>Posicion 2</li>
+          <li>Posicion 3</li>
+          <li>Posicion 4</li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
 
 
     </div><!-- /Wrapper -->

@@ -2,6 +2,26 @@
   include('conection.php');
   checkUser();
   include('config.php');
+
+  // Insert User
+  if($_POST['action']=='insert')
+  {
+    execQuery("INSERT INTO user (user,password,name,status) VALUES ('".$_POST['user']."','".$_POST['password']."','".$_POST['name']."','".$_POST['status']."')");
+
+    //
+    // $message= "INSERT INTO user (user,password,name,status) VALUES ('".$_POST['user']."','".$_POST['password']."','".$_POST['name']."','".$_POST['status']."')";
+    // // $message = $_POST['user'];
+    // echo $message;
+    // echo "<script type='text/javascript'>alert('$message');</script>";
+
+    // $message = $_POST['user'];
+    // echo "<script type='text/javascript'>alert('$message');</script>";
+
+
+    // $message = "'".$_POST['user']."','".$_POST['password'].','.$_POST['name'].','.$_POST['status'];
+    // echo "<script type='text/javascript'>alert('$message');</script>";
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -19,35 +39,32 @@
       <!-- Page Header -->
       <div class="mainTitle titW">
         <h1>Administración</h1>
-        <h4>Administrador actual: <?php echo $_SESSION['user'] ?></h4>
-
+        <h4>Administrador actual: <?php echo strtoupper($_SESSION['user']); ?></h4>
       </div>
-      h
         <!-- /Page Header -->
     </header>
     <div class="mainWrapper">
-
       <!-- Muestra equipos -->
       <div class="container transContainer">
         <div class="teamList">
           <h4>Usuarios Activos</h4>
           <div class="row">
-            <div class="col-md-2">Usuario</div>
-            <div class="col-md-3">Nombre</div>
-            <div class="col-md-1">Permisos</div>
-            <div class="col-md-3">Creado el</div>
-            <div class="col-md-3">Última Conexión</div>
+            <div class="col-md-2 txL"><b>Usuario</b></div>
+            <div class="col-md-3 txL"><b>Nombre</b></div>
+            <div class="col-md-3 txL"><b>Permisos</b></div>
+            <div class="col-md-2 txR"><b>Creado el</b></div>
+            <div class="col-md-2 txR"><b>Última Conexión</b></div>
           </div>
           <?php
             $Users = fetchAssoc("SELECT * FROM user");
             foreach($Users as $DBUser){
           ?>
           <div class="row">
-            <div class="col-md-2"><?php echo $DBUser['user']; ?></div>
-            <div class="col-md-3"><?php echo $DBUser['name']; ?></div>
-            <div class="col-md-1"><?php echo $DBUser['status']; ?></div>
-            <div class="col-md-3"><?php echo $DBUser['creation_date']; ?></div>
-            <div class="col-md-3"><?php echo $DBUser['last_login']; ?></div>
+            <div class="col-md-2 txL"><?php echo $DBUser['user']; ?></div>
+            <div class="col-md-3 txL"><?php echo $DBUser['name']; ?></div>
+            <div class="col-md-3 txL"><?php echo $DBUser['status']; ?></div>
+            <div class="col-md-2 txR"><?php echo $DBUser['creation_date']; ?></div>
+            <div class="col-md-2 txR"><?php echo $DBUser['last_login']; ?></div>
           </div>
           <?php
             }
@@ -55,8 +72,30 @@
         </div>
       </div>
 
-
-
+      <div class="container transContainer">
+        <div class="teamList">
+          <h4>Agregar Usuario</h4>
+          <div class="container teamsForm">
+            <form id="TeamsForm" action="adminPanel.php" method="post">
+              <div class="row col-md-12 addUsers">
+                <input type="hidden" name="action" value="insert">
+                <input required name="user" placeholder="Nombre de Usuario"/><br>
+                <input required name="name" placeholder="Nombre Real"/><br>
+                <input required name="password" placeholder="Password"/><br>
+                <span>Permisos</span>
+                <div class="styled-select">
+                  <select name="status">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" name="insert" value="insert data" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Agregar</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
     <!-- <?php  closeCon()  ?> -->
     </div><!-- /Wrapper -->

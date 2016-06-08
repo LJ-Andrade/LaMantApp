@@ -59,6 +59,7 @@ function execQuery($Query)// para hacer INSERT, UPDATE y DELETE
 
   $mysqli       = mysqli_connect($host, $user, $password, $database);
   return mysqli_query($mysqli , $Query);
+
 }
 
 ?>

@@ -3,6 +3,9 @@
   text-align: center
   margin: 25px
 
+
+
+
 //// INICIO ////
 
 .welcome
@@ -69,18 +72,39 @@
     -webkit-box-shadow: 7px 6px 18px -3px rgba(0,0,0,0.55)
     -moz-box-shadow: 7px 6px 18px -3px rgba(0,0,0,0.55)
     box-shadow: 7px 6px 18px -3px rgba(0,0,0,0.55)
+
+
+.teamsForm
+  .teamSelect
+    margin: 2px 0
+    background-color: #fff
+    padding: 7px
+    span
+      color: #000
+    select
+      border: 0
+      min-width: 70px
+    select:before
+      border: 0
+
+
+
 .teamSelected
   border: 1px solid black
 
-.addTeams
+.addTeams,.addUsers
   border: 0
   margin: 5px 0
   input
     padding: 8px 10px
-    margin: 3px
+    margin: 3px 0
     border: 0
     text-align: center
-    width: auto
+    width: 100%
+
+.addUsers
+  span
+    color: #fff
 
 .showAddTeamBtnDiv
   text-align: center
@@ -130,14 +154,8 @@ body.ligaMain
   h1
     color: #fff
 
-.ligaPartido
-  min-height: 250px
-  border-radius: 5px
-  background-color: rgba(226, 226, 226, 0.45)
-  padding: 20px 10px 10px
-  text-align: center
-  button
-    margin-top: 10px
+
+
 
 .partidoResultados
   padding: 2px 5px
@@ -151,33 +169,14 @@ body.ligaMain
 .pad0
   padding: 0
 
-.ligaTabla
-  padding: 10px 10px
-  // text-align: left
 
 
-.ligaPosiciones
-  padding: 10px
-  min-height: 250px
-  ul
-    display: inline
-    li
-      list-style: none
+
 
 .ligaEstadisticas
   margin-top: 15px
 
-.ligaResultados
-  margin: 0
-  margin: 15px 0
-  padding: 15px
-  text-align: left
-  ul
-    li
-      margin: 5px 15px
-      list-style: none
-      span
-        font-size: 20px
+
 .transInput
   input
     background-color: transparent
@@ -196,6 +195,13 @@ body.ligaMain
 
 .partidoExpulsados
   margin: 10px 0
+
+
+.teamList
+  padding: 15px
+  text-align: center
+  h3
+    color: #000
 
 ////// TAGS //////////
 .TEST

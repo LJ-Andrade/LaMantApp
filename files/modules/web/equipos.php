@@ -2,6 +2,17 @@
   include('conection.php');
   checkUser();
   include('config.php');
+
+  if($_POST['action']=="insert")
+  {
+    $team_name     = $_POST['team_name'];
+    $user_id       = $_POST['user_id'];
+    $national_team = $_POST['national_team'];
+    $club          = $_POST['club'];
+
+    execQuery("INSERT INTO team (user_id,team_name,national_team,club) VALUES ('".$user_id."','".$team_name."','".$national_team."','".$club."')");
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -25,26 +36,31 @@
       <!-- Muestra equipos -->
       <div class="container transContainer">
         <div class="teamList">
-          <h4>Equipos Activos</h4>
           <div class="row">
-            <div class="col-md-2">Nombre</div>
-            <div class="col-md-3">DT</div>
-            <div class="col-md-1">Selección</div>
-            <div class="col-md-3">Club</div>
-            <div class="col-md-3">Títulos</div>
+            <div class="col-md-2"><b>Nombre</b></div>
+            <div class="col-md-3"><b>DT</b></div>
+            <div class="col-md-2"><b>Selección</b></div>
+            <div class="col-md-2"><b>Club</b></div>
+            <div class="col-md-3"><b>Títulos</b></div>
           </div>
           <?php
-            $Teams = fetchAssoc("SELECT * FROM team");
-            foreach($Teams as $team){
-          ?>
+            // $Teams = fetchAssoc("SELECT * FROM team");
+            // foreach($Teams as $team){
+
+          $Teams = fetchAssoc("SELECT * FROM team JOIN user on team.user_id = user.user_id");
+
+             foreach($Teams as $team)
+            {
+            ?>
           <div class="row">
             <div class="col-md-2"><?php echo $team['team_name']; ?></div>
-            <div class="col-md-3"><?php echo $team['user_id']; ?></div>
-            <div class="col-md-1"><?php echo $team['national_team']; ?></div>
-            <div class="col-md-3"><?php echo $team['club']; ?></div>
+            <div class="col-md-3"><?php echo strtoupper($team['user']); ?></div>
+            <div class="col-md-2"><?php echo $team['national_team']; ?></div>
+            <div class="col-md-2"><?php echo $team['club']; ?></div>
+            <div class="col-md-3"></div>
           </div>
           <?php
-        };
+            };
           ?>
         </div>
       </div>
@@ -52,59 +68,29 @@
         <div class="teamList">
           <h4>Insertar equipo</h4>
           <div class="container teamsForm">
-            <form id="TeamsForm" action="" method="post">
+            <form id="TeamsForm" method="post">
               <div class="row col-md-12 addTeams">
-                <input required name="team_name[]" placeholder="Equipo"/>
-                <h5>D.T.</h5>
-                  <?php
-                  echo '<select class="" name="user_id[]">';
-                  $Users = fetchAssoc("SELECT * FROM user");
-                  foreach($Users as $DBUser)
-                  { echo '<option id="'.$DBUser['user_id'].'" >'.$DBUser['user'].'
-                          </option>'; } ?>
-                </select>
-                <input required name="national_team[]" placeholder="Selecci&oacute;n"/>
-                <input required name="club[]" placeholder="1er Club"/>
+                <input required name="team_name" placeholder="Nombre de Equipo"/><br>
+                <div class="teamSelect">
+                  <span>T&eacute;cnico: </span>
+                  <div class="styled-select">
+                    <?php
+                    echo '<select class="" name="user_id" id="user_id">';
+                    $Users = fetchAssoc("SELECT * FROM user");
+                    foreach($Users as $DBUser)
+                    { echo '<option id="'.$DBUser['user_id'].'" value="'.$DBUser['user_id'].'" >'.strtoupper($DBUser['user']).'</option>'; } ?>
+                    </select>
+                  </div>
+                </div>
+                <input required name="national_team" placeholder="Selecci&oacute;n"/>
+                <input required name="club" placeholder="1er Club"/>
+                <input type="hidden" name="action" id="action" value="insert"/>
               </div>
               <button type="submit" name="insertar" value="Ingresar" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
             </form>
           </div>
         </div>
       </div>
-      <?php
-      if(isset($_POST['insertar']))
-      {
-      $team_name     = ($_POST['team_name']);
-      $user_id       = ($_POST['user_id']);
-      $national_team = ($_POST['national_team']);
-      $club          = ($_POST['club']);
-
-      $team1field = current($team_name);
-      $team2field = current($user_id);
-      $team3field = current($national_team);
-      $team4field = current($club);
-      $userId = fetchAssoc("SELECT user_id FROM user WHERE user = '$team2field'");
-      // var_dump($userId);
-      
-}
-      // $con    = mysqli_connect($host, $user, $password, $database);
-      // $query  = "SELECT user_id FROM user WHERE user = jav";
-      // $result = mysqli_query($con, $query);
-      //
-      // var_dump($result['user_id'])
-      // $row = mysqli_fetch_array($result, MYSQLI_BOTH);
-      // printf ($row['user_id']);
-      // echo  $team1field;
-      // // echo  $team2field;
-      // echo  $team3field;
-      // echo  $team4field;
-      // echo $teamToInsertion;
-
-      // execQuery("INSERT INTO team (team_name,user_id,national_team,club) VALUES $teamToInsertion")
-
-      ?>
-
-
     </div><!-- /Wrapper -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
   </body>
