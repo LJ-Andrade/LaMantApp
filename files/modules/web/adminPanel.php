@@ -97,9 +97,8 @@
         </div>
       </div>
 
-    <!-- <?php  closeCon()  ?> -->
+     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     </div><!-- /Wrapper -->
-    <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
   </body>
 </html>

@@ -1,13 +1,14 @@
-*
-	*:after
-	*:before
-		box-sizing: border-box
+// *
+// 	*:after
+// 	*:before
+// 		box-sizing: border-box
 
 body
 	padding: 0
 	margin: 0
 	height: 100%
 	background-color: #rgb(198, 115, 115)
+	padding-bottom: 40px
 
 ul
 	margin: 0
@@ -36,6 +37,8 @@ label
 	display: none !important
 
 ////////////////// Containers ///////////////////////
+.wrapper
+	position: relative
 .mainContainer
 	margin-top: 20px
 
@@ -56,7 +59,6 @@ label
 	-webkit-align-items: center
 	-webkit-box-align: center
 	align-items: center
-
 
 .transContainer
 	background-color: rgba(226, 226, 226, 0.75)
@@ -110,18 +112,15 @@ label
 //////////// Foter ////////////////////////////////
 footer
 	position: absolute
+	left: 0
+	bottom: 0
 	width: 100%
 	padding: 8px
 	padding-top: 14px
-	left: 0
-	bottom: 0
 	width: 100%
 	height: auto
 	background: $redGradient
 	text-align: center
-	display: flex
-	align-items: center
-	justify-content: center
 	&:hover
 		cursor: pointer
 	p

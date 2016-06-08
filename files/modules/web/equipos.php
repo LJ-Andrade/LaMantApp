@@ -25,13 +25,14 @@
   <?php include('../../../files/includes/inc.web.head.php'); ?> <!-- Head -->
 </head>
   <body class="ligaMain">
-    <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
-    <header>
-      <!-- Page Header -->
-      <div class="mainTitle titW"><h1>Equipos</h1></div>
-        <!-- /Page Header -->
-    </header>
-    <div class="mainWrapper">
+    <div class="wrapper">
+      <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
+      <header>
+        <!-- Page Header -->
+        <div class="mainTitle titW"><h1>Equipos</h1></div>
+          <!-- /Page Header -->
+      </header>
+
 
       <!-- Muestra equipos -->
       <div class="container transContainer">
@@ -91,6 +92,7 @@
           </div>
         </div>
       </div>
+      <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     </div><!-- /Wrapper -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
   </body>

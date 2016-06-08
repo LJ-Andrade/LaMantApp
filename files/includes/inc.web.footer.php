@@ -1,5 +1,4 @@
 <footer class="Slogan">
-	<div class="row">
 		<div class="col-md-12 SloganChamuy Hidden">
 			<div class="">
 				<h3><?php echo APP_TITLE; ?></h3>
@@ -10,5 +9,4 @@
 		<div class="col-md-12">
 			<p><?php echo APP_VERSION ?></p>
 		</div>
-	</div>
 </footer>
