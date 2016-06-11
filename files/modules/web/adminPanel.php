@@ -35,15 +35,13 @@
 </head>
   <body class="ligaMain">
     <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
-    <header>
-      <!-- Page Header -->
-      <div class="mainTitle titW">
-        <h1>Administración</h1>
-        <h4>Administrador actual: <?php echo strtoupper($_SESSION['user']); ?></h4>
-      </div>
-        <!-- /Page Header -->
-    </header>
     <div class="mainWrapper">
+      <header>
+        <div class="mainTitle titW">
+          <h1>Administración</h1>
+          <h4>Administrador actual: <?php echo strtoupper($_SESSION['user']); ?></h4>
+        </div>
+      </header>
       <!-- Muestra equipos -->
       <div class="container transContainer">
         <div class="teamList">

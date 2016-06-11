@@ -25,12 +25,10 @@
   <?php include('../../../files/includes/inc.web.head.php'); ?> <!-- Head -->
 </head>
   <body class="ligaMain">
-    <div class="wrapper">
+    <div class="mainWrapper">
       <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
       <header>
-        <!-- Page Header -->
         <div class="mainTitle titW"><h1>Equipos</h1></div>
-          <!-- /Page Header -->
       </header>
 
 
