@@ -27,69 +27,71 @@
   <body class="ligaMain">
     <div class="mainWrapper">
       <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
-      <header>
-        <div class="mainTitle titW"><h1>Equipos</h1></div>
-      </header>
+      <div class="contentWrapper">
+        <header>
+          <div class="mainTitle titW"><h1>Equipos</h1></div>
+        </header>
 
 
-      <!-- Muestra equipos -->
-      <div class="container transContainer">
-        <div class="teamList">
-          <div class="row">
-            <div class="col-md-2"><b>Nombre</b></div>
-            <div class="col-md-3"><b>DT</b></div>
-            <div class="col-md-2"><b>Selección</b></div>
-            <div class="col-md-2"><b>Club</b></div>
-            <div class="col-md-3"><b>Títulos</b></div>
-          </div>
-          <?php
-            // $Teams = fetchAssoc("SELECT * FROM team");
-            // foreach($Teams as $team){
+        <!-- Muestra equipos -->
+        <div class="container transContainer">
+          <div class="teamList">
+            <div class="row">
+              <div class="col-md-2"><b>Nombre</b></div>
+              <div class="col-md-3"><b>DT</b></div>
+              <div class="col-md-2"><b>Selección</b></div>
+              <div class="col-md-2"><b>Club</b></div>
+              <div class="col-md-3"><b>Títulos</b></div>
+            </div>
+            <?php
+              // $Teams = fetchAssoc("SELECT * FROM team");
+              // foreach($Teams as $team){
 
-          $Teams = fetchAssoc("SELECT * FROM team JOIN user on team.user_id = user.user_id");
+            $Teams = fetchAssoc("SELECT * FROM team JOIN user on team.user_id = user.user_id");
 
-             foreach($Teams as $team)
-            {
+               foreach($Teams as $team)
+              {
+              ?>
+            <div class="row">
+              <div class="col-md-2"><?php echo $team['team_name']; ?></div>
+              <div class="col-md-3"><?php echo strtoupper($team['user']); ?></div>
+              <div class="col-md-2"><?php echo $team['national_team']; ?></div>
+              <div class="col-md-2"><?php echo $team['club']; ?></div>
+              <div class="col-md-3"></div>
+            </div>
+            <?php
+              };
             ?>
-          <div class="row">
-            <div class="col-md-2"><?php echo $team['team_name']; ?></div>
-            <div class="col-md-3"><?php echo strtoupper($team['user']); ?></div>
-            <div class="col-md-2"><?php echo $team['national_team']; ?></div>
-            <div class="col-md-2"><?php echo $team['club']; ?></div>
-            <div class="col-md-3"></div>
           </div>
-          <?php
-            };
-          ?>
         </div>
-      </div>
-      <div class="container transContainer">
-        <div class="teamList">
-          <h4>Insertar equipo</h4>
-          <div class="container teamsForm">
-            <form id="TeamsForm" method="post">
-              <div class="row col-md-12 addTeams">
-                <input required name="team_name" placeholder="Nombre de Equipo"/><br>
-                <div class="teamSelect">
-                  <span>T&eacute;cnico: </span>
-                  <div class="styled-select">
-                    <?php
-                    echo '<select class="" name="user_id" id="user_id">';
-                    $Users = fetchAssoc("SELECT * FROM user");
-                    foreach($Users as $DBUser)
-                    { echo '<option id="'.$DBUser['user_id'].'" value="'.$DBUser['user_id'].'" >'.strtoupper($DBUser['user']).'</option>'; } ?>
-                    </select>
+        <div class="container transContainer">
+          <div class="teamList">
+            <h4>Insertar equipo</h4>
+            <div class="container teamsForm">
+              <form id="TeamsForm" method="post">
+                <div class="row col-md-12 addTeams">
+                  <input required name="team_name" placeholder="Nombre de Equipo"/><br>
+                  <div class="teamSelect">
+                    <span>T&eacute;cnico: </span>
+                    <div class="styled-select">
+                      <?php
+                      echo '<select class="" name="user_id" id="user_id">';
+                      $Users = fetchAssoc("SELECT * FROM user");
+                      foreach($Users as $DBUser)
+                      { echo '<option id="'.$DBUser['user_id'].'" value="'.$DBUser['user_id'].'" >'.strtoupper($DBUser['user']).'</option>'; } ?>
+                      </select>
+                    </div>
                   </div>
+                  <input required name="national_team" placeholder="Selecci&oacute;n"/>
+                  <input required name="club" placeholder="1er Club"/>
+                  <input type="hidden" name="action" id="action" value="insert"/>
                 </div>
-                <input required name="national_team" placeholder="Selecci&oacute;n"/>
-                <input required name="club" placeholder="1er Club"/>
-                <input type="hidden" name="action" id="action" value="insert"/>
-              </div>
-              <button type="submit" name="insertar" value="Ingresar" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
-            </form>
+                <button type="submit" name="insertar" value="Ingresar" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      <div class="contentWrapper">
       <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     </div><!-- /Wrapper -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->

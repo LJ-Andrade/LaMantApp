@@ -13,8 +13,9 @@ define('APP_AUTHOR','ElVieja'); // Author
 
 // Version History
 //1 'Versi&oacute;n 1.0 - Passe Rasteirinho - Alpha'); // Finish 02/05/2016
+//2 Versi&oacute;n 0.5 - Que E Isso Cara? - (Pre-Alpha) // Finish 12/06/2016
 
 // Actual
-define('APP_VERSION','Versi&oacute;n 0.5 - Que E Isso Cara? - (Pre-Alpha)'); // Version
+define('APP_VERSION','Versi&oacute;n 0.6 - "AFOQ (Asterisc Full Of Questions)"'); // Version
 
  ?>

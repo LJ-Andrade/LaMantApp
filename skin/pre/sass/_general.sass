@@ -1,7 +1,10 @@
-// *
-// 	*:after
-// 	*:before
-// 		box-sizing: border-box
+*
+	*:after
+	*:before
+		box-sizing: border-box
+
+.row
+	margin: 0
 
 html
 	height: 100%
@@ -12,6 +15,11 @@ body
 	margin: 0
 	height: 100%
 	background-color: #rgb(198, 115, 115)
+	background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
 
 ul
 	margin: 0
@@ -69,6 +77,8 @@ label
 	background-color: rgba(226, 226, 226, 0.75)
 	padding: 15px
 
+.contentWrapper
+	padding-bottom: 60px
 ////////////////// Titles ////////////////////////////////
 
 ////////// Checkboxes ///////////////////////////////////////////
@@ -135,3 +145,11 @@ footer
 		margin-bottom: 0
 	h5
 		color: rgb(218, 218, 218)
+
+///////// SLOGAN ////////////
+.footerSlogan
+	border: 1px solid red
+	-webkit-transition: all 0.5s ease
+	-moz-transition: all 0.5s ease
+	-o-transition: all 0.5s ease
+	transition: all 0.5s ease

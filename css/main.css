@@ -71,12 +71,6 @@ p {
 .txC {
   text-align: center; }
 
-* *:before {
-  box-sizing: border-box; }
-
-.row {
-  margin: 0; }
-
 html {
   height: 100%;
   position: relative; }
@@ -85,12 +79,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  background-color: #rgb 198, 115, 115;
-  background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  background-color: #rgb 198, 115, 115; }
 
 ul {
   margin: 0;
@@ -147,9 +136,6 @@ label {
 .transContainer {
   background-color: rgba(226, 226, 226, 0.75);
   padding: 15px; }
-
-.contentWrapper {
-  padding-bottom: 60px; }
 
 .checkbox-custom, .radio-custom {
   opacity: 0;
@@ -263,23 +249,6 @@ footer {
     .styled-select select:hover {
       cursor: pointer; }
 
-.mantBtn {
-  border: 0;
-  background: #dd4040;
-  border-radius: 4px;
-  box-shadow: 0 5px 0 #872020;
-  color: #fff;
-  cursor: pointer;
-  font: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 12px 20px;
-  transition: all 0.1s linear; }
-
-.mantBtn:active {
-  box-shadow: 0 2px 0 #872020;
-  transform: translateY(3px); }
-
 .logo {
   max-width: 80px; }
 
@@ -301,13 +270,6 @@ nav ul li a {
 .nav-link:hover {
   cursor: pointer; }
 
-.topColNav {
-  background-color: #c13232;
-  padding: 5px; }
-  .topColNav h4, .topColNav a {
-    color: #fff;
-    font-weight: 300; }
-
 .mainTitle {
   text-align: center;
   margin: 25px; }
@@ -318,10 +280,7 @@ nav ul li a {
   margin-top: 25px;
   text-align: center; }
   .welcome h1 {
-    text-align: center;
-    color: #fff; }
-  .welcome h3, .welcome h2 {
-    color: #fff; }
+    text-align: center; }
   .welcome img {
     max-width: 450px; }
 
@@ -407,6 +366,18 @@ nav ul li a {
 
 .showAddTeamBtnDiv {
   text-align: center; }
+
+.homeMenu {
+  display: flex;
+  text-align: center; }
+  .homeMenu h4 {
+    font-size: 1em; }
+
+.menuCard {
+  max-width: 300px;
+  text-align: center; }
+  .menuCard img {
+    max-width: 100%; }
 
 .categoriasMenu ul li {
   list-style: none;
@@ -596,45 +567,6 @@ div.tagsinput {
   padding-top: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
-.homeMenu {
-  position: relative;
-  transition: all 0.5s ease 0s;
-  -webkit-box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.5s ease 0s; }
-  .homeMenu h1 {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 2rem;
-    text-shadow: 0px 0px 6px black;
-    transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -webkit-box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
-    text-transform: uppercase; }
-  .homeMenu img {
-    max-width: 100%;
-    transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -webkit-box-shadow: 0px 17px 10px -5px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0px 17px 10px -5px rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 17px 10px -5px rgba(0, 0, 0, 0.6); }
-  .homeMenu:hover {
-    cursor: pointer; }
-    .homeMenu:hover h1 {
-      font-weight: 300;
-      color: #ffffff; }
-    .homeMenu:hover img {
-      -webkit-filter: brightness(1.1);
-      -moz-filter: brightness(1.1);
-      filter: brightness(1.4);
-      -webkit-box-shadow: 0px 17px 10px -12px rgba(0, 0, 0, 0.6);
-      -moz-box-shadow: 0px 17px 10px -12px rgba(0, 0, 0, 0.6);
-      box-shadow: 0px 17px 10px -12px rgba(0, 0, 0, 0.6); }
-
-.homeMenuTitle {
-  margin-top: 15px; }
-
 .partidoyTabla {
   text-align: center;
   position: relative; }
@@ -648,7 +580,7 @@ div.tagsinput {
 .ligaPartido {
   padding: 10px 10px;
   border-radius: 5px; }
-  .ligaPartido botonLoco {
+  .ligaPartido button {
     margin-top: 10px; }
 
 .ligaPartidoInner {
@@ -680,6 +612,11 @@ div.tagsinput {
   min-height: 250px; }
   .ligaInner div {
     padding: 0; }
+
+.anotarPartido {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 25px; }
 
 .transition {
   transition: all 0.3s ease 0s; }

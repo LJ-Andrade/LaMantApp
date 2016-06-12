@@ -18,9 +18,7 @@
     <div class="mainWrapper">
       <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
       <header>
-        <!-- Page Header -->
-        <div class="mainTitle titB"><h1>Liga</h1></div>
-          <!-- /Page Header -->
+        <div class="mainTitle titW"><h1>Liga</h1></div>
       </header>
 
       <div class="container">
@@ -28,7 +26,7 @@
 
           <div class="col-md-4 col-xs-12 ligaWelcome">
             <div class="container transContainer ligaWelcomeInner">
-              <h3>Liga Loca llena de chele!</h3>
+              <h3>Algo sobre la liga</h3>
             </div>
           </div>
 
@@ -63,9 +61,7 @@
                     <label>Expulsados Visitantes</label>
                   </div>
                 </div>
-                <div class="col-md-12 anotarPartido">
-                  <button type="submit" name="anotarResultado" class="btn btn-default">Fin del Partido</button>
-                </div>
+                  <button type="submit" class="mantBtn">Fin del Partido</button>
               </form>
             </div>
           </div>
