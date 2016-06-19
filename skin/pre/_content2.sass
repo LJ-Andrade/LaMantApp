@@ -1,0 +1,89 @@
+// MENU
+.homeMenu
+  img
+    width: 100%
+    max-width: 100%
+    transition: all 0.3s ease 0s
+    border-radius: 0 0 10px 10px
+  .homeMenuTitle
+    background-color: rgba(255, 255, 255, 0.38)
+    padding: 10px 5px 5px
+    text-align: center
+    transition: all 0.3s ease 0s
+  >div
+    transition: all 0.3s ease 0s
+    margin: 25px 0
+    h1
+      transition: all 0.5s ease 0s
+      font-size: 1.8rem
+
+    &:hover
+      .homeMenuTitle
+        background-color: rgb(233, 86, 86)
+        @include translate(0,-9px)
+        cursor: pointer
+      h1
+        font-weight: 700
+        font-size: 2rem
+        color: #ffffff
+        @include text-shadow(2px, 2px, 4px, rgba(24, 24, 24, 1))
+      img
+        @include box-shadow(2px, 17px, 9px, -11px, rgb(46, 46, 46))
+        @include translate(0, 20px)
+        @include scale(1.1 , 1.1)
+
+
+
+/////////////////////////////////////////
+
+.partidoyTabla
+  text-align: center
+  position: relative
+
+.ligaWelcome
+  padding: 10px 10px
+.ligaWelcomeInner
+  min-height: 250px
+
+.ligaPartido
+  padding: 10px 10px
+  border-radius: 5px
+  botonLoco
+    margin-top: 10px
+
+.ligaPartidoInner
+  min-height: 250px
+  div
+    padding: 5px
+
+.partidoExpulsados
+  margin-top: 20px
+  div
+    padding: 0
+
+
+.ligaResultados
+  padding: 10px 10px
+  ul
+    li
+      margin: 5px 15px
+      list-style: none
+      span
+        font-size: 20px
+
+.ligaTabla
+  padding: 10px 10px
+  // text-align: left
+  ul
+    display: inline
+    li
+      list-style: none
+
+.ligaInner
+  min-height: 250px
+  div
+    padding: 0
+
+
+.transition
+  transition: all 0.3s ease 0s

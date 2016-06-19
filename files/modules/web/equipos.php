@@ -86,7 +86,7 @@
                   <input required name="club" placeholder="1er Club"/>
                   <input type="hidden" name="action" id="action" value="insert"/>
                 </div>
-                <button type="submit" name="insertar" value="Ingresar" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
+                <button type="submit" name="insertar" value="Ingresar" class="btn mantBtn"><i class="fa fa-hand-peace-o"></i> Anotar</button>
               </form>
             </div>
           </div>

@@ -1,0 +1,162 @@
+*
+	*:after
+	*:before
+		box-sizing: border-box
+
+.row
+	margin: 0
+
+html
+	height: 100%
+	position: relative
+
+body
+	padding: 0
+	margin: 0
+	height: 100%
+	background-color: #rgb(198, 115, 115)
+	background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+
+body.index
+	background: url(../images/body/backgrounds/ligaBackL.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+
+ul
+	margin: 0
+	padding: 0
+
+label
+	margin: 0
+	font-weight: 400
+
+////////// General Styles /////////////////////////////
+.brd
+	border: 1px solid red
+
+.centertxt
+	text-align: center
+
+.pad0
+	padding: 0
+.marg0
+	margin: 0
+.padmarg0
+	padding: 0
+	margin: 0
+
+.Hidden
+	display: none !important
+
+////////////////// Containers ///////////////////////
+.mainWrapper
+	min-height: 100%
+	position: relative
+
+.mainContainer
+	margin-top: 20px
+
+.row-centered
+	text-align: center
+
+.col-centered
+	display: inline-block
+	float: none
+	text-align: left
+	margin-right: -4px
+
+.flex-container
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-ms-flex-align: center
+	-webkit-align-items: center
+	-webkit-box-align: center
+	align-items: center
+
+.transContainer
+	background-color: rgba(226, 226, 226, 0.75)
+	padding: 15px
+
+.contentWrapper
+	padding-bottom: 60px
+////////////////// Titles ////////////////////////////////
+
+////////// Checkboxes ///////////////////////////////////////////
+
+.checkbox-custom, .radio-custom
+	opacity: 0
+	position: absolute
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label
+	display: inline-block
+	vertical-align: middle
+	margin: 1px 0
+	cursor: pointer
+	&:active, &:focus
+		outline: none
+
+.checkbox-custom-label, .radio-custom-label
+	position: relative
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before
+	content: ''
+	background: #fff
+	border: 1px solid #ddd
+	display: inline-block
+	vertical-align: middle
+	width: 20px
+	height: 20px
+	padding: 1px
+	margin-right: 10px
+	text-align: center
+
+.checkbox-custom:checked + .checkbox-custom-label:before
+	background: rgb(198, 52, 97)
+	box-shadow: inset 0px 0px 0px 4px #fff
+
+.radio-custom + .radio-custom-label:before
+	border-radius: 50%
+
+.radio-custom:checked + .radio-custom-label:before
+	background: #ccc
+	box-shadow: inset 0px 0px 0px 4px #fff
+
+.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label
+	outline: 1px solid #ddd
+
+//////////// Foter ////////////////////////////////
+footer
+	position: absolute
+	width: 100%
+	bottom: 0
+	padding: 8px
+	padding-top: 14px
+	width: 100%
+	height: auto
+	background: $redGradient
+	text-align: center
+	&:hover
+		cursor: pointer
+	p
+		color: #fff
+		font-size: 1rem
+		font-weight: 300
+		align-self: flex-end
+		margin-bottom: 0
+	h5
+		color: rgb(218, 218, 218)
+
+///////// SLOGAN ////////////
+.footerSlogan
+	border: 1px solid red
+	-webkit-transition: all 0.5s ease
+	-moz-transition: all 0.5s ease
+	-o-transition: all 0.5s ease
+	transition: all 0.5s ease

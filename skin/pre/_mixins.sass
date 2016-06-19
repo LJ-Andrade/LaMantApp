@@ -1,0 +1,40 @@
+
+// TRANSLATE //
+//@include translate(0,-20px)
+@mixin translate( $x , $y )
+  -ms-transform: translate($x, $y)
+  -webkit-transform: translate($x, $y)
+  transform: translate($x, $y)
+
+// BOX-SHADOW //
+// box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]
+
+//  @include box-shadow(5px,5px,5px,5px, rgb(46, 46, 46))
+@mixin box-shadow( $horiz, $vert, $blur, $spread, $color)
+  -webkit-box-shadow: $horiz $vert $blur $spread $color
+  -moz-box-shadow: $horiz $vert $blur $spread $color
+  box-shadow: $horiz $vert $blur $spread $color
+
+// TEXT SHADOW //
+//1. value = The X-coordinate - 2. value = The Y-coordinate - 3. value = The blur radius - 4. value = The color of the shadow
+
+//  @include tShadow(5px,5px,5px, rgb(46, 46, 46))
+@mixin text-shadow($x, $y, $blur, $color)
+  -webkit-text-shadow: $x $y $blur $color
+  -moz-text-shadow: $x $y $blur $color
+  -moz-text-shadow: $x $y $blur $color
+  -o-text-shadow: $x $y $blur $color
+  text-shadow: $x $y $blur $color
+
+
+
+
+  // SCALE //
+// @include scale(1.1 , 1.1)
+
+@mixin scale($x , $y)
+  -ms-transform: scale($x, $y)
+  -webkit-transform: scale($x, $y)
+  transform: scale($x, $y)
+
+///////////// OTROS /////////////////////
