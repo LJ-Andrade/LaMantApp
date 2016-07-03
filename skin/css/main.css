@@ -74,9 +74,6 @@ p {
 * *:before {
   box-sizing: border-box; }
 
-.row {
-  margin: 0; }
-
 html {
   height: 100%;
   position: relative; }
@@ -127,8 +124,9 @@ label {
   display: none !important; }
 
 .mainWrapper {
-  min-height: 100%;
-  position: relative; }
+  height: 100%;
+  position: relative;
+  max-height: 100%; }
 
 .mainContainer {
   margin-top: 20px; }
@@ -156,7 +154,8 @@ label {
   padding: 15px; }
 
 .contentWrapper {
-  padding-bottom: 60px; }
+  height: 100%;
+  max-height: 100%; }
 
 .checkbox-custom, .radio-custom {
   opacity: 0;
@@ -226,6 +225,33 @@ footer {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+
+.closeX {
+  cursor: pointer; }
+
+.alert {
+  padding-top: 35px;
+  min-height: 100px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  color: #000;
+  border: 0; }
+  .alert .fa {
+    color: #000; }
+    .alert .fa:hover {
+      color: #ccc; }
+
+.alertMError {
+  background-color: rgba(195, 33, 33, 0.8);
+  color: #fff; }
+  .alertMError .fa {
+    color: #fff; }
+    .alertMError .fa:hover {
+      color: #ccc; }
+
+.alertMWelcome {
+  background-color: rgba(255, 255, 255, 0.91); }
 
 .deleteIcon {
   padding: 0 10px;
@@ -328,18 +354,15 @@ nav ul li a {
   text-align: center;
   margin: 25px; }
 
-.welcome {
-  margin: 0 auto;
-  margin-bottom: 25px;
-  margin-top: 25px;
-  text-align: center; }
-  .welcome h1 {
-    text-align: center;
-    color: #fff; }
-  .welcome h3, .welcome h2 {
-    color: #fff; }
-  .welcome img {
-    max-width: 450px; }
+.mainMenuHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  justify-content: center; }
 
 .teams {
   margin-top: 15px;
@@ -427,15 +450,6 @@ nav ul li a {
 .categoriasMenu ul li {
   list-style: none;
   display: inline-block; }
-
-.homeWelcomeMessage {
-  margin: 65px 0; }
-  .homeWelcomeMessage .fa {
-    font-size: 25px; }
-
-.homeMantero {
-  margin: 25px 0;
-  text-align: center; }
 
 body.ligaMain {
   background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed;

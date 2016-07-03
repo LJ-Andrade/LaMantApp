@@ -1,8 +1,7 @@
 <?php
   session_start();
-  if($_GET['msg']=='error')
-    echo 'ERROR MAL LOS DATOS';
-  if($_GET['msg']=='notvalid')
+
+    if($_GET['msg']=='notvalid')
     echo 'ERROR PADRE';
 ?>
 
@@ -36,5 +35,43 @@
       </div>
     </div>
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
+    <script type="text/javascript">
+    var url = window.location.href;
+    if(url.indexOf('?msg=error') != -1) {
+      $.notify({
+      	// options
+      	icon: 'fa fa-wheelchair',
+      	title: 'Escribí bien paralítico',
+
+        },{
+        	// settings
+        	type: "danger",
+        	allow_dismiss: true,
+        	placement: {
+        		from: "top",
+        		align: "center"
+        	},
+        	offset: 20,
+        	spacing: 10,
+        	z_index: 1031,
+        	delay: 5000,
+        	timer: 1000,
+        	animate: {
+        		enter: 'animated fadeInDown',
+        		exit: 'animated fadeOutUp'
+        	},
+          icon_type:'class',
+          template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0} alertMError" role="alert">' +
+                		'<span class="closeX" data-notify="dismiss"><i class="fa fa-times"></i></span>' +
+                		'<span data-notify="icon"></span> ' +
+                		'<span data-notify="title">{1}</span> ' +
+                		'<div class="progress" data-notify="progressbar">' +
+              			'<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                		'</div>' +
+                		'<a href="{3}" target="{4}" data-notify="url"></a>' +
+                  	'</div>'
+            });
+          }
+    </script>
   </body>
 </html>

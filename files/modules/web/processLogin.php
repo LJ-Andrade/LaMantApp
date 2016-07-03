@@ -1,6 +1,4 @@
 <?php
-  //var_dump($_POST);
-  //header("Location: usuarios.php");
   include('conection.php');
 
   $User     = $_POST['user'];
@@ -25,7 +23,7 @@
   if(count($Cant)>0)
   {
     $_SESSION['user']= $User;
-    header("Location: index.php");
+    header("Location: index.php?msg=logOk");
   }else{
     header("Location: login.php?msg=error");
   }
