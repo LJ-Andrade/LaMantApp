@@ -17,6 +17,7 @@ body
 	-moz-background-size: cover
 	-o-background-size: cover
 	background-size: cover
+	position: relative
 
 body.index
 	background: url(../images/body/backgrounds/ligaBackL.jpg) no-repeat center center fixed
@@ -50,6 +51,18 @@ label
 
 .Hidden
 	display: none !important
+
+.flexAllCenter
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
 
 ////////////////// Containers ///////////////////////
 .mainWrapper
@@ -131,13 +144,12 @@ label
 
 //////////// Foter ////////////////////////////////
 footer
-	position: absolute
+	position: fixed
 	width: 100%
 	bottom: 0
 	padding: 8px
 	padding-top: 14px
 	width: 100%
-	height: auto
 	background: $redGradient
 	text-align: center
 	&:hover
@@ -152,9 +164,3 @@ footer
 		color: rgb(218, 218, 218)
 
 ///////// SLOGAN ////////////
-.footerSlogan
-	border: 1px solid red
-	-webkit-transition: all 0.5s ease
-	-moz-transition: all 0.5s ease
-	-o-transition: all 0.5s ease
-	transition: all 0.5s ease

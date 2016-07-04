@@ -18,8 +18,55 @@
   -ms-grid-row-align: center
   align-items: center
   justify-content: center
+  margin-top: 40px
+  max-width: 750px
+  .col-md-6
+    padding: 0
 
-.mainMenuHomeInner
+
+.mainMenuItems
+  width: auto
+  background-color: rgba(247, 247, 247, 0.59)
+  ul
+    text-align: left
+    li
+      padding: 15px
+      list-style: none
+      transition: all 0.3s ease 0s
+      font-size: 1.2rem
+      font-weight: 700
+      .fa
+        background-color: #fff
+        border-radius: 100%
+        width: 40px
+        height: 40px
+        padding-top: 10px
+        padding-left: 10px
+        margin-right: 10px
+        color: rgb(236, 20, 20)
+      &:hover
+        background-color: rgba(159, 13, 37, 0.8)
+        cursor: pointer
+        color: #fff
+        font-size: 1.5rem
+        text-transform: uppercase
+        .fa
+          color: rgb(153, 29, 70)
+          padding-top: 9px
+          padding-left: 8px
+
+.mainMenuImgs
+  img
+    height: 280px
+
+@media (max-width: 550px)
+  .mainMenuHome
+    display: block
+    max-width: 319px
+    text-align: center
+  .mainMenuImgs
+    img
+      text-align: center
 
 .teams
   margin-top: 15px
@@ -65,7 +112,12 @@
   display: -ms-flexbox
   display: -webkit-flex
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   form
     border-radius: 10px

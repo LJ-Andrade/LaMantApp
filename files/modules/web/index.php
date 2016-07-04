@@ -14,46 +14,26 @@
   <?php include('../../../files/includes/inc.web.head.php'); ?> <!-- Head -->
 
 </head>
-  <body class="index">
-    <div class="mainWrapper brd">
+  <body>
+    <div class="mainWrapper">
     <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
       <!-- <div class="contentWrapper"> -->
 
           <div class="container mainMenuHome">
-            <div class="mainMenuHomeInner">
-              <div class="col-md-6 col-sm-6">
-                <div class="homeMenuTitle">
-                  <h1>Liga</h1>
-                </div>
-                <div class="homeMenuImg">
-                  <a href="liga.php"><img src="../../../skin/images/body/menu/ligadiaria.jpg" alt="" class="animated fadeIn" /></a>
-                </div>
-              </div>
-              <div  class="col-md-6 col-sm-6">
-                <div class="homeMenuTitle">
-                  <h1>Champion</h1>
-                </div>
-                <div id="test" class="homeMenuImg">
-                  <a href="#"><img src="../../../skin/images/body/menu/mantis.jpg" alt="" class="animated fadeIn" />
-                </div>
-              </div>
-              <div  class="col-md-6 col-sm-6">
-                <div class="homeMenuTitle">
-                  <h1>Títulos</h1>
-                </div>
-                <div class="homeMenuImg">
-                  <a  href="premios.php"><img src="../../../skin/images/body/menu/premios.jpg" alt="" class="animated fadeIn" />
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="homeMenuTitle">
-                  <h1>Estad&iacute;sticas</h1>
-                </div>
-                <div class="homeMenuImg">
-                  <a href="estadist.php"><img src="../../../skin/images/body/menu/estadist.jpg" alt="" class="animated fadeIn" />
-                </div>
+            <div class="col-md-6">
+              <div class="mainMenuItems">
+                <ul>
+                  <li class="menu1"><i class="fa fa-wheelchair"></i> Liga</li>
+                  <li class="menu2"><i class="fa fa-users"></i> Mantis</li>
+                  <li class="menu3"><i class="fa fa-trophy"></i> T&iacute;tulos</li>
+                  <li class="menu4"><i class="fa fa-bar-chart"></i> Estad&iacute;sticas</li>
+                </ul>
               </div>
             </div>
+            <div class="col-md-6 mainMenuImgs">
+              <img id="menuImg" src="../../../skin/images/body/menu/main.jpg" alt="" class="animated fadeIn" />
+            </div>
+
           </div>
 
         <!-- Modal -->
@@ -66,9 +46,7 @@
         </div>
           <!-- Modal -->
       <!-- </div> --><!-- /contentWrapper -->
-      <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     </div>
-    <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
     <script type="text/javascript">
       var url = window.location.href;
       if(url.indexOf('?msg=logOk') != -1) {
@@ -106,6 +84,28 @@
           '</div>'
         });
       }
+
+    ////////////////////////////////
+    function hoverMenu() {
+      $('.menu1').mouseover(function() {
+        $('#menuImg').attr('src','../../../skin/images/body/menu/ligadiaria.jpg');
+      });
+      $('.menu2').mouseover(function() {
+        $('#menuImg').attr('src','../../../skin/images/body/menu/mantis.jpg');
+      });
+      $('.menu3').mouseover(function() {
+        $('#menuImg').attr('src','../../../skin/images/body/menu/premios.jpg');
+      });
+      $('.menu4').mouseover(function() {
+        $('#menuImg').attr('src','../../../skin/images/body/menu/estadist.jpg');
+      });
+      $('.menu1, .menu2, .menu3, .menu4').mouseout(function(){
+        $('#menuImg').attr('src','../../../skin/images/body/menu/main.jpg');
+      });
+    }
+    hoverMenu();
     </script>
+    <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
+    <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
   </body>
 </html>

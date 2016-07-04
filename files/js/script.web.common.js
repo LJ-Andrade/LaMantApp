@@ -54,11 +54,7 @@ $( document ).ready(function() {
   });
 
   ///// SLOGAN /////
-
-  $('.Slogan').hover(function() {
-    if ($(".SloganChamuy").hasClass("Hidden")) {
-      $('.SloganChamuy').removeClass('Hidden');
-    } else {
-      $('.SloganChamuy').addClass('Hidden');
-    }
+$('.SloganChamuy').hide();
+  $('.foot').hover(function() {
+    $(".SloganChamuy").toggle(300)
   });
