@@ -286,7 +286,8 @@ footer {
       color: #ccc; }
 
 .alertMError {
-  background-color: rgba(195, 33, 33, 0.8);
+  background-color: #d62929;
+  border: 10px solid white;
   color: #fff; }
   .alertMError .fa {
     color: #fff; }
@@ -446,17 +447,16 @@ nav ul li a {
         padding-top: 10px;
         padding-left: 10px;
         margin-right: 10px;
-        color: #ec1414; }
+        color: #ec1414;
+        font-size: 1.2rem; }
       .mainMenuItems ul li:hover {
         background-color: rgba(159, 13, 37, 0.8);
         cursor: pointer;
         color: #fff;
-        font-size: 1.5rem;
         text-transform: uppercase; }
         .mainMenuItems ul li:hover .fa {
-          color: #991d46;
-          padding-top: 9px;
-          padding-left: 8px; }
+          font-size: 1.2rem;
+          color: #991d46; }
 
 .mainMenuImgs img {
   height: 280px; }
@@ -555,6 +555,14 @@ nav ul li a {
   color: #fff; }
 
 .showAddTeamBtnDiv {
+  text-align: center; }
+
+.randomQuote {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  max-width: 450px;
+  margin-top: 45px;
+  padding: 10px;
   text-align: center; }
 
 .categoriasMenu ul li {

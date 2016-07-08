@@ -48,6 +48,18 @@
         </div>
       </div>
       <!-- Modal -->
+      <div class="container randomQuote">
+        <?php
+
+
+               echo '<div>';
+              $frase = fetchAssoc("SELECT frase FROM frase ORDER BY RAND() limit 0,1");
+               foreach($frase as $DBfrase)
+               { echo $DBfrase['frase']; };
+               echo '</div>';
+               ?>
+
+      </div>
       <!-- </div> --><!-- /contentWrapper -->
     </div>
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->

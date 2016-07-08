@@ -6,31 +6,43 @@
   // Select Queries
   $Team = fetchAssoc("SELECT * FROM team");
   $LeagueName = fetchAssoc("SELECT * FROM league");
+  //
+  // if($_POST['action']=="createLeague")
+  // {
+  //   $leagueName = $_POST['leagueName'];
+  //   execQuery("INSERT INTO league (league_name) VALUES ('".$leagueName."')");
+  //   echo 'OK. Liga agregada';
+  // }
+  // else {
+  //   echo 'error';
+  // }
 
-
-  if($_POST['action']=="createLeague")
-  {
-    $leagueName = $_POST['leagueName'];
-    execQuery("INSERT INTO league (league_name) VALUES ('".$leagueName."')");
-  }
 
   if($_POST['action']=="insertMatch")
   {
-    $leagueSelected = $_POST['leagueNameSelect'];
-    $localTeam      = $_POST['localTeam'];
-    $localGoal      = $_POST['localGoals'];
-    $localExp      = $_POST['localExp'];
-    $visitorTeam      = $_POST['visitorTeam'];
-    $visitorGoal      = $_POST['visitorGoals'];
-    $visitorExp      = $_POST['visitorExp'];
+    $localTeam     = $_POST['visitorTeam'];
+    execQuery("INSERT INTO game (gameTest) VALUES ('".$localTeam."')");
+  }
 
-    // echo "'".$leagueSelected."','".$localTeam."','".$localGoal."','".$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp."'";
+  // if($_POST['action']=="insertMatch")
+  // {
+  //   $leagueSelected = $_POST['leagueNameSelect'];
+  //   $localTeam      = $_POST['localTeam'];
+  //   $localGoal      = $_POST['localGoals'];
+  //   $localExp       = $_POST['localExp'];
+  //   $visitorTeam    = $_POST['visitorTeam'];
+  //   $visitorGoal    = $_POST['visitorGoals'];
+  //   $visitorExp     = $_POST['visitorExp'];
+  //
+  //   // echo "'".$leagueSelected."','".$localTeam."','".$localGoal."','".$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp."'";
+  // //
+  // // $queryInsertMatch = execQuery("INSERT INTO match (league_id, localTeam, localGoals, localExp, visitorTeam, visitorGoals, visitorExp)
+  // //   VALUES ('".$leagueSelected."','".$localTeam."','".$localGoal."','".$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp."')");
+  //
+  //   execQuery("INSERT INTO league (leagueName) VALUES ('".$localTeam."')");
+  //
+  // }
 
-    execQuery("INSERT INTO match (league_id,localTeam,localGoal,localExp,visitorTeam,visitorGoal,visitorExp)
-     VALUES ('".$leagueSelected."','".$localTeam."','".$localGoal."','".$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp."')");
-
-
-    }
 
 
 ?>
@@ -47,8 +59,8 @@
 </head>
   <body>
     <div class="container phpTest">
-      <?php// echo "'.$leagueSelected."','".$localTeam"','".$localGoal.'","'.$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp.";
-      ?>
+      <!-- <?php //echo "'".$leagueSelected."','".$localTeam."','".$localGoal."','".$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp."'";
+      ?> -->
 
     </div>
     <div class="mainWrapper">
@@ -146,7 +158,7 @@
             <div class="container transContainer ligaPartidoInner">
               <h2>RESULTADOS</h2>
               <hr>
-        
+
 
             </div>
           </div>

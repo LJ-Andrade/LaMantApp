@@ -7,8 +7,16 @@
   if($_POST['action']=='insert')
   {
     execQuery("INSERT INTO user (user,password,name,status) VALUES ('".$_POST['user']."','".$_POST['password']."','".$_POST['name']."','".$_POST['status']."')");
-
   }
+
+// Insert Quote
+  if($_POST['action']=="frase")
+  {
+    $frase     = $_POST['frase'];
+    echo $frase;
+    execQuery("INSERT INTO frase (frase) VALUES ('".$frase."')");
+  }
+
 
 ?>
 
@@ -59,7 +67,7 @@
       </div>
 
       <div class="container transContainer">
-        <div class="teamList">
+        <div class="teamList col-md-6">
           <h4>Agregar Usuario</h4>
           <div class="container teamsForm">
             <form id="TeamsForm" action="adminPanel.php" method="post">
@@ -81,9 +89,21 @@
             </form>
           </div>
         </div>
-      </div>
-
-     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
+        <div class="container col-md-6 teamList">
+          <h4>Frase del Día</h4>
+          <div class="container teamsForm">
+            <form id="TeamsForm" action="adminPanel.php" method="post">
+              <div class="row col-md-12 addUsers">
+                <input type="hidden" name="action" value="frase">
+                <textarea class="form-control" rows="5" id="comment" name="frase" value="frase" placeholder="Manda magia papa"></textarea>
+                </div>
+              </div>
+              <button type="submit" name="insert" value="insert data" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Agregar</button>
+            </form>
+          </div>
+          <br><br><br><br>
+        </div>
+    <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     </div><!-- /Wrapper -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
   </body>
