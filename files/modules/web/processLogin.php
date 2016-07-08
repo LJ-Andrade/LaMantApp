@@ -20,6 +20,10 @@
   // header("Location: login.php?msg=error");
 
   $Cant = fetchAssoc("SELECT user_id FROM user WHERE user='".$User."' AND password='".$Password."'");
+
+
+
+
   if(count($Cant)>0)
   {
     $_SESSION['user']= $User;
@@ -27,7 +31,7 @@
   }else{
     header("Location: login.php?msg=error");
   }
-
+  
 
 
 ?>

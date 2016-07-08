@@ -72,9 +72,6 @@ p {
 .txC {
   text-align: center; }
 
-* *:before {
-  box-sizing: border-box; }
-
 html {
   height: 100%;
   position: relative; }
@@ -171,6 +168,22 @@ label {
   height: 100%;
   max-height: 100%; }
 
+.title {
+  max-width: 350px;
+  padding: 10px 15px;
+  -webkit-box-shadow: 2px 2px 8px 0px #2e2e2e;
+  -moz-box-shadow: 2px 2px 8px 0px #2e2e2e;
+  box-shadow: 2px 2px 8px 0px #2e2e2e;
+  border: 5px solid white;
+  text-align: center;
+  margin: 25px 0 20px; }
+  .title h1 {
+    color: #fff;
+    margin-bottom: 0; }
+  .title p {
+    color: #fff;
+    margin-bottom: 5px; }
+
 .checkbox-custom, .radio-custom {
   opacity: 0;
   position: absolute; }
@@ -231,6 +244,30 @@ footer {
     margin-bottom: 0; }
   footer h5 {
     color: #dadada; }
+  footer .SloganChamuy {
+    margin-bottom: -90px;
+    padding-top: 26px;
+    transition: all 1s ease 0s; }
+    footer .SloganChamuy h3, footer .SloganChamuy h5 {
+      -webkit-opacity: 0.25;
+      -moz-opacity: 0.25;
+      opacity: 0;
+      -webkit-transition: all 3s ease;
+      -moz-transition: all 3s ease;
+      -ms-transition: all 3s ease;
+      -o-transition: all 3s ease;
+      transition: all 3s ease; }
+  footer:hover .SloganChamuy {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 20px; }
+    footer:hover .SloganChamuy h3, footer:hover .SloganChamuy h5 {
+      opacity: 1; }
+
+.footVersion {
+  position: absolute;
+  bottom: 0;
+  padding: 10px; }
 
 .closeX {
   cursor: pointer; }
@@ -302,31 +339,42 @@ footer {
     .styled-select select:hover {
       cursor: pointer; }
 
-.mantBtn {
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #6b6b6b, #393939);
-  background-image: -moz-linear-gradient(top, #6b6b6b, #393939);
-  background-image: -ms-linear-gradient(top, #6b6b6b, #393939);
-  background-image: -o-linear-gradient(top, #6b6b6b, #393939);
-  background-image: linear-gradient(to bottom, #6b6b6b, #393939);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  text-shadow: 3px 1px 5px #666666;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  transition: all 0.3s ease 0s; }
-  .mantBtn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #8a8a8a, #666666);
-    background-image: -moz-linear-gradient(top, #8a8a8a, #666666);
-    background-image: -ms-linear-gradient(top, #8a8a8a, #666666);
-    background-image: -o-linear-gradient(top, #8a8a8a, #666666);
-    background-image: linear-gradient(to bottom, #8a8a8a, #666666);
-    text-decoration: none; }
+.mainBtn {
+  margin: 5px;
+  border: 0;
+  padding: 9px 20px 9px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px -3px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  background: #b55f49;
+  color: #fff; }
+  .mainBtn:hover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    color: #fff;
+    background: #a35743; }
+  .mainBtn:focus, .mainBtn:active {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    color: #fff;
+    background: #b55f49; }
+
+a .mainbtn {
+  color: #fff; }
 
 .logo {
   max-width: 80px; }
@@ -361,6 +409,10 @@ nav ul li a {
   margin: 25px; }
 
 .mainMenuHome {
+  border: 25px solid rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 2px 2px 8px 0px #2e2e2e;
+  -moz-box-shadow: 2px 2px 8px 0px #2e2e2e;
+  box-shadow: 2px 2px 8px 0px #2e2e2e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +422,8 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  max-width: 750px; }
+  max-width: 750px;
+  padding: 0; }
   .mainMenuHome .col-md-6 {
     padding: 0; }
 
@@ -508,18 +561,19 @@ nav ul li a {
   list-style: none;
   display: inline-block; }
 
-body.ligaMain {
-  background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+.ligaWelcome .mainBtn {
+  margin-top: 15px; }
 
-.liga {
-  margin-top: 25px;
+.addLeague {
+  margin: 2px;
+  padding: 2px;
   text-align: center; }
-  .liga h1 {
-    color: #fff; }
+  .addLeague p {
+    margin: 0;
+    margin-top: 5px; }
+
+.ligaPartido {
+  text-align: center; }
 
 .partidoResultados {
   padding: 2px 5px; }
@@ -529,9 +583,6 @@ body.ligaMain {
 .partidoResultadosGoles {
   padding-left: 4px !important;
   margin-bottom: 2px; }
-
-.pad0 {
-  padding: 0; }
 
 .ligaEstadisticas {
   margin-top: 15px; }
@@ -559,6 +610,14 @@ body.ligaMain {
   text-align: center; }
   .teamList h3 {
     color: #000; }
+
+.leagueSelector {
+  background-color: #f2f2f2; }
+
+.leagueSelectorTitle p {
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 0; }
 
 .TEST {
   background-color: #fff;
@@ -613,6 +672,16 @@ div.tagsinput {
 .not_valid {
   background: #FBD8DB !important;
   color: #90111A !important; }
+
+.phpTest {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .loginScreen {
   background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed;
@@ -727,22 +796,34 @@ div.tagsinput {
 
 .partidoyTabla {
   text-align: center;
-  position: relative; }
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .ligaWelcome {
-  padding: 10px 10px; }
+  padding: 10px 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .ligaWelcomeInner {
-  min-height: 250px; }
+  min-height: 250px;
+  width: 100%; }
 
 .ligaPartido {
   padding: 10px 10px;
-  border-radius: 5px; }
-  .ligaPartido botonLoco {
-    margin-top: 10px; }
+  border-radius: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .ligaPartidoInner {
-  min-height: 250px; }
+  min-height: 250px;
+  width: 100%; }
   .ligaPartidoInner div {
     padding: 5px; }
 

@@ -18,42 +18,46 @@
     <div class="mainWrapper">
     <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
       <!-- <div class="contentWrapper"> -->
-
-          <div class="container mainMenuHome">
-            <div class="col-md-6">
-              <div class="mainMenuItems">
-                <ul>
-                  <li class="menu1"><i class="fa fa-wheelchair"></i> Liga</li>
-                  <li class="menu2"><i class="fa fa-users"></i> Mantis</li>
-                  <li class="menu3"><i class="fa fa-trophy"></i> T&iacute;tulos</li>
-                  <li class="menu4"><i class="fa fa-bar-chart"></i> Estad&iacute;sticas</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 mainMenuImgs">
-              <img id="menuImg" src="../../../skin/images/body/menu/main.jpg" alt="" class="animated fadeIn" />
-            </div>
-
-          </div>
-
-        <!-- Modal -->
-        <div id="myModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              ...
-            </div>
+      <div class="container flexAllCenter">
+        <div class="title">
+          <p>Bienvenidos a</p>
+          <h1>LA MANTA APP !!</h1>
+        </div>
+      </div>
+      <div class="container mainMenuHome">
+        <div class="col-md-6">
+          <div class="mainMenuItems">
+            <ul>
+              <a href="liga.php"><li class="menu1"><i class="fa fa-wheelchair"></i> Liga</li></a>
+              <a href="mantis.php"><li class="menu2"><i class="fa fa-trophy"></i> Mantis</li></a>
+              <a href="titulos.php"><li class="menu3"><i class="fa fa-shopping-cart"></i> T&iacute;tulos</li></a>
+              <a href="estadist.php"><li class="menu4"><i class="fa fa-bar-chart"></i> Estad&iacute;sticas</li></a>
+            </ul>
           </div>
         </div>
-          <!-- Modal -->
+        <div class="col-md-6 mainMenuImgs">
+          <img id="menuImg" src="../../../skin/images/body/menu/main.jpg" alt="" class="animated fadeIn" />
+        </div>
+      </div>
+      <!-- Modal -->
+      <div id="myModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            ...
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
       <!-- </div> --><!-- /contentWrapper -->
     </div>
+    <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
     <script type="text/javascript">
       var url = window.location.href;
       if(url.indexOf('?msg=logOk') != -1) {
         $.notify({
           // options
           icon: 'fa fa-futbol-o',
-          title: 'Bienvenido <?php echo strtoupper($_SESSION['user']); ?> a La Manta App!!',
+          title: 'Bienvenido <?php  echo strtoupper($_SESSION['user']); ?> a La Manta App!!',
 
         },{
           // settings
@@ -86,6 +90,7 @@
       }
 
     ////////////////////////////////
+
     function hoverMenu() {
       $('.menu1').mouseover(function() {
         $('#menuImg').attr('src','../../../skin/images/body/menu/ligadiaria.jpg');
@@ -105,7 +110,6 @@
     }
     hoverMenu();
     </script>
-    <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
   </body>
 </html>

@@ -10,6 +10,8 @@
 
 
 .mainMenuHome
+  border: 25px solid rgba(255, 255, 255, 0.8)
+  @include box-shadow(2px, 2px, 8px, 0px, rgb(46, 46, 46))
   display: -webkit-box
   display: -ms-flexbox
   display: flex
@@ -20,6 +22,7 @@
   justify-content: center
   margin-top: 40px
   max-width: 750px
+  padding: 0
   .col-md-6
     padding: 0
 
@@ -171,20 +174,20 @@
 
 /////// LIGA ////////
 
-body.ligaMain
-  background: url(../images/body/backgrounds/ligaBack.jpg) no-repeat center center fixed
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
-.liga
-  margin-top: 25px
+.ligaWelcome
+  .mainBtn
+    margin-top: 15px
+
+.addLeague
+  margin: 2px
+  padding: 2px
   text-align: center
-  h1
-    color: #fff
+  p
+    margin: 0
+    margin-top: 5px
 
-
-
+.ligaPartido
+  text-align: center
 
 .partidoResultados
   padding: 2px 5px
@@ -195,16 +198,8 @@ body.ligaMain
   padding-left: 4px !important
   margin-bottom: 2px
 
-.pad0
-  padding: 0
-
-
-
-
-
 .ligaEstadisticas
   margin-top: 15px
-
 
 .transInput
   input
@@ -231,6 +226,16 @@ body.ligaMain
   text-align: center
   h3
     color: #000
+
+.leagueSelector
+  background-color: rgb(242, 242, 242)
+
+.leagueSelectorTitle
+  p
+    font-weight: 500
+    margin-top: 5px
+    margin-bottom: 0
+
 
 ////// TAGS //////////
 .TEST
@@ -287,3 +292,16 @@ div.tagsinput
 .not_valid
   background: #FBD8DB !important
   color: #90111A !important
+
+
+  // TESTS
+
+.phpTest
+  text-align: center
+  padding: 10px
+  border-radius: 10px
+  background-color: #fff
+  color: #000
+  font-weight: 500
+  margin-top: 10px
+  margin-bottom: 10px

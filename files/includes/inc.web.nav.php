@@ -10,22 +10,22 @@
     ☰
   </button>
   <ul class="nav navbar-nav pull-right">
-      <?php
-      $user = $_SESSION['user'];
-      ?>
-      <li class="nav-item active"><a class="nav-link" href="index.php"><?php echo strtoupper($_SESSION['user']); ?> &nbsp;|</a></li>
-      <li class="nav-item active"><a class="nav-link" href="index.php">Inicio</a></li>
-      <?php
-        if(isset($_SESSION['user'])){
-          echo '<li class="nav-item"><a class="nav-link" href="liga.php">Liga</a></li>
-          <li class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></li>';
-        }
-        if($user == jav) {
-          echo '<li class="nav-item"><a class="nav-link" href="adminPanel.php">Admin </a></li>';
-        }
-        if(isset($_SESSION['user'])){
-          echo '<li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i></a></li>';
-        }
-      ?>
-    </ul>
+    <?php
+    $user = $_SESSION['user'];
+    ?>
+    <li class="nav-item active"><a class="nav-link" href="index.php"><?php echo strtoupper($_SESSION['user']); ?> &nbsp;|</a></li>
+    <li class="nav-item active"><a class="nav-link" href="index.php">Inicio</a></li>
+    <?php
+      if(isset($_SESSION['user'])){
+        echo '<li class="nav-item"><a class="nav-link" href="liga.php">Liga</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></li>';
+      }
+      if($user == jav) {
+        echo '<li class="nav-item"><a class="nav-link" href="adminPanel.php">Admin </a></li>';
+      }
+      if(isset($_SESSION['user'])){
+        echo '<li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i></a></li>';
+      }
+    ?>
+  </ul>
 </nav>

@@ -1,8 +1,8 @@
 $( document ).ready(function() {
   // Wow Image Loader On Scroll //
   new WOW().init();
-});
-/////// Tags /////////
+
+/////// TAGS  /////////
   function onAddTag(tag) {
     alert("Added a tag: " + tag);
   }
@@ -53,8 +53,6 @@ $( document ).ready(function() {
     // });
   });
 
-  ///// SLOGAN /////
-$('.SloganChamuy').hide();
-  $('.foot').hover(function() {
-    $(".SloganChamuy").toggle(300)
-  });
+
+
+}); // Document Ready

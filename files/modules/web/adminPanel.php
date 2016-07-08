@@ -8,18 +8,6 @@
   {
     execQuery("INSERT INTO user (user,password,name,status) VALUES ('".$_POST['user']."','".$_POST['password']."','".$_POST['name']."','".$_POST['status']."')");
 
-    //
-    // $message= "INSERT INTO user (user,password,name,status) VALUES ('".$_POST['user']."','".$_POST['password']."','".$_POST['name']."','".$_POST['status']."')";
-    // // $message = $_POST['user'];
-    // echo $message;
-    // echo "<script type='text/javascript'>alert('$message');</script>";
-
-    // $message = $_POST['user'];
-    // echo "<script type='text/javascript'>alert('$message');</script>";
-
-
-    // $message = "'".$_POST['user']."','".$_POST['password'].','.$_POST['name'].','.$_POST['status'];
-    // echo "<script type='text/javascript'>alert('$message');</script>";
   }
 
 ?>
