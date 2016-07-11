@@ -62,8 +62,12 @@
       </div>
       <!-- </div> --><!-- /contentWrapper -->
     </div>
-    <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
-    <script type="text/javascript">
+
+  <?php
+    include('../../includes/inc.web.footer.php');
+    include('../../includes/inc.web.scripts.php');
+  ?>
+  <script type="text/javascript">
       var url = window.location.href;
       if(url.indexOf('?msg=logOk') != -1) {
         $.notify({
@@ -101,27 +105,27 @@
         });
       }
 
-    ////////////////////////////////
+      ////////////////////////////////
+      function hoverMenu() {
+        $('.menu1').mouseover(function() {
+          $('#menuImg').attr('src','../../../skin/images/body/menu/ligadiaria.jpg');
+        });
+        $('.menu2').mouseover(function() {
+          $('#menuImg').attr('src','../../../skin/images/body/menu/mantis.jpg');
+        });
+        $('.menu3').mouseover(function() {
+          $('#menuImg').attr('src','../../../skin/images/body/menu/premios.jpg');
+        });
+        $('.menu4').mouseover(function() {
+          $('#menuImg').attr('src','../../../skin/images/body/menu/estadist.jpg');
+        });
+        $('.menu1, .menu2, .menu3, .menu4').mouseout(function(){
+          $('#menuImg').attr('src','../../../skin/images/body/menu/main.jpg');
+        });
+      }
+      hoverMenu();
 
-    function hoverMenu() {
-      $('.menu1').mouseover(function() {
-        $('#menuImg').attr('src','../../../skin/images/body/menu/ligadiaria.jpg');
-      });
-      $('.menu2').mouseover(function() {
-        $('#menuImg').attr('src','../../../skin/images/body/menu/mantis.jpg');
-      });
-      $('.menu3').mouseover(function() {
-        $('#menuImg').attr('src','../../../skin/images/body/menu/premios.jpg');
-      });
-      $('.menu4').mouseover(function() {
-        $('#menuImg').attr('src','../../../skin/images/body/menu/estadist.jpg');
-      });
-      $('.menu1, .menu2, .menu3, .menu4').mouseout(function(){
-        $('#menuImg').attr('src','../../../skin/images/body/menu/main.jpg');
-      });
-    }
-    hoverMenu();
     </script>
-    <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
+
   </body>
 </html>

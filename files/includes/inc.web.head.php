@@ -6,9 +6,7 @@
 <link href="../../../skin/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../../../skin/css/main.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../../../skin/css/animate.css" rel="stylesheet" type="text/css" media="all" />
-<!-- Compass -->
-<!-- <link href="../../../skin/css/screen.css" rel="stylesheet" type="text/css" media="all" /> -->
-<link href="../../../skin/css/print.css" rel="stylesheet" type="text/css" media="all" />
+
 <!--[if IE]>
 <link href="../../../skin/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->

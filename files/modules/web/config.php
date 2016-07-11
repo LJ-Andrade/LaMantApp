@@ -18,4 +18,6 @@ define('APP_AUTHOR','ElVieja'); // Author
 // Actual
 define('APP_VERSION','Versi&oacute;n 0.6 - "AFOQ (Asterisc Full Of Questions)"'); // Version
 
+include('../../functions/common.php');
+
  ?>

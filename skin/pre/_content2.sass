@@ -36,44 +36,86 @@
 
 /////////////////////////////////////////
 
-.partidoyTabla
+.leagueRow
   text-align: center
   position: relative
-  display: -webkit-flex
-  display: -ms-flexbox
+  margin-bottom: 25px
   display: flex
-  -webkit-flex-wrap: wrap
-  -ms-flex-wrap: wrap
+
+.leagueItem
+  min-height: 100%
+  display: flex
   flex-wrap: wrap
 
-.ligaWelcome
-  padding: 10px 10px
-  display: -webkit-flex
-  display: -ms-flexbox
-  display: flex
-
-.ligaWelcomeInner
-  min-height: 250px
+.leagueItemInner
   width: 100%
 
-.ligaPartido
-  padding: 10px 10px
-  border-radius: 5px
-  display: -webkit-flex
+.leagueSelector
+  background-color: rgba(255, 255, 255, 0.74)
+  margin-bottom: 15px
+  display: -webkit-box
   display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
+  align-items: center
+  padding: 5px 0
 
-.ligaPartidoInner
-  min-height: 250px
-  width: 100%
-  div
-    padding: 5px
+@media (max-width: 765px)
+  .leagueRow
+    display: block
+
+.leagueSelectorTitle
+  // p
+  //   margin: 0
 
 .partidoExpulsados
   margin-top: 20px
   div
     padding: 0
 
+// Games Results
+.gamesResultsRow
+  background-color: rgba(255, 255, 255, 0.7)
+  padding: 5px
+  .goals
+    font-weight: 800
+    font-size: 18px
+
+.gamesResultsExp
+  background-color: rgba(255, 255, 255, 0.5)
+  border-bottom: 1px solid rgba(121, 121, 121, 0.59)
+  padding-bottom: 5px
+
+
+.gameResultsexpLocal
+  text-align: right
+  border-right: 1px solid rgb(110, 110, 110)
+  span
+    margin-right: 15px
+    font-size: 14px
+.gameResultsexpVisitor
+  text-align: left
+  padding-left: 15px
+  span
+    margin-left: 15px
+    font-size: 14px
+
+.gameResultsexpVisitor,.gameResultsexpLocal
+  img
+    width: 10px
+
+.actualLeagueResults
+  padding: 5px
+  margin-top: -5px
+  text-align: center
+  span
+    font-weight: 800
+
+.playersInputs
+  div
+    padding: 0 5px
 
 .ligaResultados
   padding: 10px 10px

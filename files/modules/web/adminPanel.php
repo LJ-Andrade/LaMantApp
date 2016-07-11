@@ -7,18 +7,18 @@
   if($_POST['action']=='insert')
   {
     execQuery("INSERT INTO user (user,password,name,status) VALUES ('".$_POST['user']."','".$_POST['password']."','".$_POST['name']."','".$_POST['status']."')");
+    header('Location: adminPanel.php');
   }
 
 // Insert Quote
   if($_POST['action']=="frase")
   {
     $frase     = $_POST['frase'];
-    echo $frase;
     execQuery("INSERT INTO frase (frase) VALUES ('".$frase."')");
+    // echo '<script>alertaOK();</script>';
+    header('Location: adminPanel.php');
   }
-
-
-?>
+  ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -98,7 +98,7 @@
                 <textarea class="form-control" rows="5" id="comment" name="frase" value="frase" placeholder="Manda magia papa"></textarea>
                 </div>
               </div>
-              <button type="submit" name="insert" value="insert data" class="btn btn-info addTeamBtn"><i class="fa fa-hand-peace-o"></i> Agregar</button>
+              <button type="submit" name="insert" value="insert data" class="btn btn-info addTeamBtn"> Agregar</button>
             </form>
           </div>
           <br><br><br><br>
@@ -106,5 +106,45 @@
     <?php include('../../includes/inc.web.footer.php'); ?> <!-- Footer -->
     </div><!-- /Wrapper -->
     <?php include('../../includes/inc.web.scripts.php'); ?> <!-- Scripts -->
+
+    <script type="text/javascript">
+    function alertaOK() {
+
+
+                  $.notify({
+                    // options
+                    title: 'Frase Agregada !',
+
+                  },{
+                    // settings
+                    type: "danger",
+                    allow_dismiss: true,
+                    placement: {
+                      from: "bottom",
+                      align: "center"
+                    },
+                    offset: 200,
+                    spacing: 10,
+                    z_index: 1031,
+                    delay: 5000,
+                    timer: 1000,
+                    animate: {
+                      enter: 'animated fadeInDown',
+                      exit: 'animated fadeOutUp'
+                    },
+                    icon_type:'class',
+                    template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0} alertMWelcome" role="alert">' +
+                    '<span class="closeX" data-notify="dismiss"><i class="fa fa-times"></i></span>' +
+                    '<span data-notify="icon"></span> ' +
+                    '<span data-notify="title">{1}</span> ' +
+                    '<div class="progress" data-notify="progressbar">' +
+                    '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                    '</div>' +
+                    '<a href="{3}" target="{4}" data-notify="url"></a>' +
+                    '</div>'
+                  });
+    }
+
+    </script>
   </body>
 </html>
