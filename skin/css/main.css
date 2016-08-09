@@ -408,7 +408,7 @@ nav ul li a {
   font-weight: 300; }
 
 .navbar {
-  background-color: #393939;
+  background-color: transparent;
   border-radius: 0; }
 
 .bg-inverse {
@@ -538,12 +538,11 @@ nav ul li a {
   justify-content: center; }
   .teamsForm form {
     border-radius: 10px;
-    background: linear-gradient(to bottom, #8f5959 0, #d77474 95%);
+    background-color: #bf6969;
     margin-top: 15px;
-    padding: 15px 10px;
-    -webkit-box-shadow: 7px 6px 18px -3px rgba(0, 0, 0, 0.55);
-    -moz-box-shadow: 7px 6px 18px -3px rgba(0, 0, 0, 0.55);
-    box-shadow: 7px 6px 18px -3px rgba(0, 0, 0, 0.55); }
+    padding: 15px 10px; }
+    .teamsForm form h4 {
+      color: #fff; }
 
 .teamsForm .teamSelect {
   margin: 2px 0;

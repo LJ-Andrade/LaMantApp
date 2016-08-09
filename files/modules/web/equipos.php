@@ -28,11 +28,11 @@
     <div class="mainWrapper">
       <?php include('../../../files/includes/inc.web.nav.php'); ?> <!-- Navegation -->
       <div class="contentWrapper">
-        <header>
-          <div class="mainTitle titW"><h1>Equipos</h1></div>
-        </header>
-
-
+        <div class="container flexAllCenter">
+          <div class="title">
+            <h1>Equipos</h1>
+          </div>
+        </div>
         <!-- Muestra equipos -->
         <div class="container transContainer">
           <div class="teamList">
@@ -66,9 +66,9 @@
         </div>
         <div class="container transContainer">
           <div class="teamList">
-            <h4>Insertar equipo</h4>
             <div class="container teamsForm">
               <form id="TeamsForm" method="post">
+                <h4>Insertar equipo</h4>
                 <div class="row col-md-12 addTeams">
                   <input required name="team_name" placeholder="Nombre de Equipo"/><br>
                   <div class="teamSelect">

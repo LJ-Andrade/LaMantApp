@@ -56,3 +56,45 @@ $( document ).ready(function() {
 
 
 }); // Document Ready
+
+
+function alertMe(url, message, icon ) {
+
+    var urlRoot = window.location.href;
+    if(urlRoot.indexOf(url) != -1) {
+      $.notify({
+        // options
+        icon: icon,
+        title: message,
+
+      },{
+        // settings
+        type: "danger",
+        allow_dismiss: true,
+        placement: {
+          from: "bottom",
+          align: "center"
+        },
+        offset: 100,
+        spacing: 10,
+        z_index: 1031,
+        delay: 2000,
+        timer: 1000,
+        animate: {
+          enter: 'animated fadeInUp',
+          exit: 'animated fadeOutDown'
+        },
+        icon_type:'class',
+        template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0} alertMWelcome" role="alert">' +
+        '<span class="closeX" data-notify="dismiss"><i class="fa fa-times"></i></span>' +
+        '<span data-notify="icon"></span> ' +
+        '<span data-notify="title">{1}</span> ' +
+        '<div class="progress" data-notify="progressbar">' +
+        '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+        '</div>' +
+        '<a href="{3}" target="{4}" data-notify="url"></a>' +
+        '</div>'
+      });
+    }
+
+}

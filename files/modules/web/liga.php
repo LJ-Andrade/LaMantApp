@@ -11,7 +11,8 @@
   {
     $leagueName = $_POST['leagueName'];
     execQuery("INSERT INTO league (league_name) VALUES ('".$leagueName."')");
-    header('Location: liga.php');
+    header('Location: liga.php?msg=leagueCreated');
+    die();
   };
 
   if($_POST['action']=="insertMatch")
@@ -30,7 +31,8 @@
     else {
   $queryInsertMatch = execQuery("INSERT INTO game (league_id, localTeam, localGoals, localExp, visitorTeam, visitorGoals, visitorExp)
     VALUES ('".$leagueSelected."','".$localTeam."','".$localGoal."','".$localExp."','".$visitorTeam."','".$visitorGoal."','".$visitorExp."')");
-    header('Location: liga.php');
+    header('Location: liga.php?msg=matchOver');
+    die();
     }
   };
 ?>
@@ -237,6 +239,19 @@
     //     });
     // });
     //
+
+    //
+    // ?msg=leagueCreated
+    // Bienvenido <?php  echo strtoupper($_SESSION['user']); ?> a La Manta App!!
+    //
+
+    alertMe("?msg=leagueCreated", "Liga Creada", "fa fa-check" );
+    alertMe("?msg=matchOver", "Partido Anotado!", "fa fa-check" );
+
+
+
+
+
     </script>
   </body>
 </html>
