@@ -1,0 +1,253 @@
+//// Titles ////
+.mainTitle
+  text-align: center
+  margin: 25px
+
+
+
+
+//// INICIO ////
+
+
+.mainMenuHome
+  border: 25px solid rgba(255, 255, 255, 0.8)
+  @include box-shadow(2px, 2px, 8px, 0px, rgb(46, 46, 46))
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
+  align-items: center
+  justify-content: center
+  margin-top: 40px
+  max-width: 750px
+  padding: 0
+  .col-md-6
+    padding: 0
+
+
+.mainMenuItems
+  width: auto
+  background-color: rgba(247, 247, 247, 0.59)
+  ul
+    text-align: left
+    li
+      padding: 15px
+      list-style: none
+      transition: all 0.3s ease 0s
+      font-size: 1.2rem
+      font-weight: 700
+      .fa
+        background-color: #fff
+        border-radius: 100%
+        width: 40px
+        height: 40px
+        padding-top: 10px
+        padding-left: 10px
+        margin-right: 10px
+        color: rgb(236, 20, 20)
+        font-size: 1.2rem
+      &:hover
+        background-color: rgba(159, 13, 37, 0.8)
+        cursor: pointer
+        color: #fff
+        text-transform: uppercase
+        .fa
+          font-size: 1.2rem
+          color: rgb(153, 29, 70)
+          // padding-top: 9px
+          // padding-left: 8px
+
+.mainMenuImgs
+  img
+    height: 280px
+
+@media (max-width: 550px)
+  .mainMenuHome
+    display: block
+    max-width: 319px
+    text-align: center
+  .mainMenuImgs
+    img
+      text-align: center
+
+.teams
+  margin-top: 15px
+  margin-bottom: 10px
+  background: linear-gradient(to bottom,#e68d8d 0,#f56363 95%)
+  padding: 15px
+  h2
+    margin-bottom: 15px
+    text-align: center
+
+.tablaLigaRes
+  max-width: 950px
+
+#tabla
+  background-color: rgb(190, 190, 190)
+  input
+    color: #000
+    padding-left: 10px
+    border: 0
+
+// Teams //
+
+.listTeams,.listTitles
+  background-color: rgb(238, 62, 62)
+  color: #fff
+  padding: 5px
+  margin: 2px 0
+  transition: all 0.3s ease 0s
+
+.listTitles
+  background-color: rgb(60, 60, 60)
+  font-weight: 600
+
+.listTeams
+  &:hover
+    background-color: rgb(240, 169, 169)
+    cursor: pointer
+    color: #000
+
+.teamsForm
+  text-align: center
+  max-width: 350px
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  form
+    border-radius: 10px
+    background-color: rgb(191, 105, 105)
+    margin-top: 15px
+    padding: 15px 10px
+    h4
+      color: #fff
+
+
+.teamsForm
+  .teamSelect
+    margin: 2px 0
+    background-color: #fff
+    padding: 7px
+    span
+      color: #000
+    select
+      border: 0
+      min-width: 70px
+    select:before
+      border: 0
+
+.teamSelected
+  border: 1px solid black
+
+.addTeams,.addUsers
+  border: 0
+  margin: 5px 0
+  input
+    padding: 8px 10px
+    margin: 3px 0
+    border: 0
+    text-align: center
+    width: 100%
+
+.addUsers
+  span
+    color: #fff
+
+.showAddTeamBtnDiv
+  text-align: center
+
+/// RANDOM QUOTE ///
+.randomQuote
+  background-color: rgba(255, 255, 255, 0.5)
+  color: #000
+  max-width: 450px
+  margin-top: 45px
+  padding: 10px
+  text-align: center
+
+
+////// CATEGORIAS //////
+.categoriasMenu
+  ul
+    li
+      list-style: none
+      display: inline-block
+
+////// TAGS //////////
+.TEST
+  background-color: #fff
+  margin: 25px 0
+  padding: 10px
+
+div.tagsinput
+  border-bottom: 1px solid rgb(108, 108, 108)
+  background: transparent
+  padding: 5px
+  width: 300px
+  height: 40px
+  overflow-y: auto
+  span.tag
+    border-radius: 5px
+    -moz-border-radius: 2px
+    -webkit-border-radius: 2px
+    display: block
+    float: left
+    padding: 5px
+    text-decoration: none
+    background: #af8073
+    color: #fff
+    margin-right: 5px
+    margin-bottom: 5px
+    font-family: helvetica
+    font-size: 13px
+    a
+      font-weight: 700
+      color: #fff
+      text-decoration: none
+      font-size: 11px
+  input
+    width: 80px
+    margin: 0 5px 5px 0
+    font-family: helvetica
+    font-size: 13px
+    border: 1px solid transparent
+    padding: 5px
+    background: 0 0
+    color: #000
+    outline: 0
+
+  div
+    display: block
+    float: left
+
+.tags_clear
+  clear: both
+  width: 100%
+  height: 0
+
+.not_valid
+  background: #FBD8DB !important
+  color: #90111A !important
+
+
+
+  // TESTS
+
+.phpTest
+  text-align: center
+  padding: 10px
+  border-radius: 10px
+  background-color: #fff
+  color: #000
+  font-weight: 500
+  margin-top: 10px
+  margin-bottom: 10px

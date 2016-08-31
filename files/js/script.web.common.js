@@ -96,5 +96,26 @@ function alertMe(url, message, icon ) {
         '</div>'
       });
     }
-
 }
+
+
+
+
+//////////////// LEAGUE //////////////////
+$('#createLeagueBtn').click(function(){
+  $(this).addClass("Hidden");
+  $('#continueLeagueBtn').addClass('Hidden');
+  $('#createLeagueForm').removeClass('Hidden');
+})
+
+$('#continueLeagueBtn').click(function(){
+    $(this).addClass("Hidden");
+    $('#createLeagueBtn').addClass('Hidden');
+    $('#continueLeagueForm').removeClass('Hidden');
+})
+
+$('.closeForm').click(function(){
+  $(this).parent('form').addClass('Hidden');
+  $('#createLeagueBtn').removeClass('Hidden');
+  $('#continueLeagueBtn').removeClass('Hidden');
+})

@@ -21,7 +21,7 @@
         <li class="nav-item"><a class="nav-link" href="equipos.php">Equipos</a></li>';
       }
       if($user == jav) {
-        echo '<li class="nav-item"><a class="nav-link" href="adminPanel.php">Admin </a></li>';
+        echo '<li class="nav-item"><a class="nav-link" href="admin-panel.php">Admin </a></li>';
       }
       if(isset($_SESSION['user'])){
         echo '<li class="nav-item"><a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i></a></li>';

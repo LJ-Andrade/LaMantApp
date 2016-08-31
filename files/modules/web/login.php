@@ -18,7 +18,7 @@
   <body class="loginScreen">
     <div class="mainWrapper">
       <div id="mainLogin">
-        <form id="loginForm" action="processLogin.php"  onsubmit="return validateForm()" method="POST">
+        <form id="loginForm" action="process-login.php"  onsubmit="return validateForm()" method="POST">
           <h1>La Manta App</h1>
           <p>Despleg&aacute; la manta del poder</p>
           <hr>
@@ -28,7 +28,7 @@
           </div>
           <div class="loginRow">
             <i class="fa fa-lock"></i>
-            <input id="password" type="text" name="password" placeholder="Password"/>
+            <input id="password" type="password" name="password" placeholder="Password"/>
           </div><br>
           <button type="submit" value="Enviar" onclick="verifyMail();"/>Ingresar</button>
         </form>

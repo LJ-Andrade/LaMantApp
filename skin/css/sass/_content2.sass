@@ -1,0 +1,169 @@
+// MENU
+.homeMenu
+  img
+    width: 100%
+    max-width: 100%
+    transition: all 0.3s ease 0s
+    border-radius: 0 0 10px 10px
+  .homeMenuTitle
+    background-color: rgba(255, 255, 255, 0.38)
+    padding: 10px 5px 5px
+    text-align: center
+    transition: all 0.3s ease 0s
+  >div
+    transition: all 0.3s ease 0s
+    margin: 25px 0
+    h1
+      transition: all 0.5s ease 0s
+      font-size: 1.8rem
+
+    &:hover
+      .homeMenuTitle
+        background-color: rgb(233, 86, 86)
+        @include translate(0,-9px)
+        cursor: pointer
+      h1
+        font-weight: 700
+        font-size: 2rem
+        color: #ffffff
+        @include text-shadow(2px, 2px, 4px, rgba(24, 24, 24, 1))
+      img
+        @include box-shadow(2px, 17px, 9px, -11px, rgb(46, 46, 46))
+        @include translate(0, 20px)
+        @include scale(1.1 , 1.1)
+
+
+
+/////////////////////////////////////////
+
+.leagueRow
+  text-align: center
+  position: relative
+  margin-bottom: 25px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.leagueRow2
+  text-align: center
+  position: relative
+  margin-bottom: 25px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+
+.leagueItem
+  min-height: 100%
+  display: flex
+  flex-wrap: wrap
+
+.leagueItemInner
+  width: 100%
+
+.leagueSelector
+  background-color: rgba(255, 255, 255, 0.74)
+  margin-bottom: 15px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -ms-grid-row-align: center
+  align-items: center
+  padding: 5px 0
+
+@media (max-width: 765px)
+  .leagueRow
+    display: block
+
+.leagueSelectorTitle
+  // p
+  //   margin: 0
+
+.partidoExpulsados
+  margin-top: 20px
+  div
+    padding: 0
+
+// Games Results
+.gamesResultsRow
+  background-color: rgba(255, 255, 255, 0.7)
+  padding: 5px
+  .goals
+    font-weight: 800
+    font-size: 18px
+
+.gamesResultsExp
+  background-color: rgba(255, 255, 255, 0.5)
+  border-bottom: 1px solid rgba(121, 121, 121, 0.59)
+  padding-bottom: 5px
+
+
+.gameResultsexpLocal
+  text-align: right
+  border-right: 1px solid rgb(110, 110, 110)
+  span
+    margin-right: 15px
+    font-size: 14px
+.gameResultsexpVisitor
+  text-align: left
+  padding-left: 15px
+  span
+    margin-left: 15px
+    font-size: 14px
+
+.gameResultsexpVisitor,.gameResultsexpLocal
+  img
+    width: 10px
+
+.actualLeagueResults
+  padding: 5px
+  margin-top: -5px
+  text-align: center
+  span
+    font-weight: 800
+
+.playersInputs
+  div
+    padding: 0 5px
+
+.ligaResultados
+  padding: 10px 10px
+  ul
+    li
+      margin: 5px 15px
+      list-style: none
+      span
+        font-size: 20px
+
+.ligaTabla
+  padding: 10px 10px
+  // text-align: left
+  ul
+    display: inline
+    li
+      list-style: none
+
+.ligaInner
+  min-height: 250px
+  div
+    padding: 0
+
+
+/// PLAYED LEAGUES ////
+.selectALeague
+  width: 400px
+  max-width: 450px
+  text-align: center
+
+
+
+.transition
+  transition: all 0.3s ease 0s
